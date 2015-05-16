@@ -5,6 +5,8 @@
  * @package Marvy
  */
 
+require get_template_directory() . '/customizer/customizer-framework.php';
+
 if ( ! function_exists( 'marvy_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -107,9 +109,9 @@ add_action( 'widgets_init', 'marvy_widgets_init' );
 function marvy_scripts() {
 	wp_enqueue_style( 'marvy-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'marvy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'marvy-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'marvy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'marvy-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
