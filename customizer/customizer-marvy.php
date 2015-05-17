@@ -43,17 +43,50 @@ $options[] = array(
 	'type' => 'section'
 );
 
+$options[] = array(
+	'title' => __( 'Feature Content', 'marvy' ), // Section name
+	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
+	'panel' => 'home_panel', // panel
+	'id' => 'home_feature_content', // unique ID
+	'priority' => 10,
+	'theme_supports' => '',
+	'type' => 'section'
+);
+
+$options[] = array(
+	'title' => __( 'Feature Pages', 'marvy' ), // Section name
+	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
+	'panel' => 'home_panel', // panel
+	'id' => 'home_feature_pages', // unique ID
+	'priority' => 10,
+	'theme_supports' => '',
+	'type' => 'section'
+);
+
+$options[] = array(
+	'title' => __( 'Theme Features', 'marvy' ), // Section name
+	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
+	'panel' => 'home_panel', // panel
+	'id' => 'home_theme_features', // unique ID
+	'priority' => 10,
+	'theme_supports' => '',
+	'type' => 'section'
+);
+
 /* ---------------------------------------------------------------------------------------------------
   Controls
   --------------------------------------------------------------------------------------------------- */
 
+/*
+ * Home Banner Options
+ */
 
-// Color Picker field - Example Panel - section 1
+// Home page banner background
 $options[] = array(
-	'title' => __( 'Color Picker Field', 'marvy' ), // Control label
+	'title' => __( 'Background', 'marvy' ), // Control label
 	'description' => '', // Control description
-	'section' => 'colors', // section
-	'id' => 'home_banner_color', // unique ID
+	'section' => 'home_banner_section', // section
+	'id' => 'home_banner_bg_color', // unique ID
 	'default' => '#ee6e73', // HEX
 	'option' => 'color',
 	'sanitize_callback' => '',
@@ -61,15 +94,120 @@ $options[] = array(
 		//'transport' => 'postMessage'
 );
 
-// Textarea field - Example Panel - section 1
+// Home page banner content
 $options[] = array(
-	'title' => __( 'Textarea Field', 'marvy' ), // Control label
+	'title' => __( 'Content', 'marvy' ), // Control label
 	'description' => '', // Control description
 	'section' => 'home_banner_section', // section
 	'id' => 'home_banner_text', // unique ID
-	'default' => 'Welcome to Marvy WordPress Theme with <strong>Customizer</strong> options',
+	'default' => 'Welcome to Marvy<br> WordPress Theme with <strong>Customizer</strong> options',
 	'option' => 'textarea',
 	'sanitize_callback' => 'esc_textarea',
+	'type' => 'control'
+);
+
+// Banner button text
+$options[] = array(
+	'title' => __( 'Button Text', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_banner_section', // section
+	'id' => 'home_banner_button_text', // unique ID
+	'default' => 'Download',
+	'option' => 'text',
+	'sanitize_callback' => 'sanitize_text_field',
+	'type' => 'control'
+);
+
+// Banner button link
+$options[] = array(
+	'title' => __( 'Button Link', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_banner_section', // section
+	'id' => 'home_banner_button_url', // unique ID
+	'default' => '#',
+	'option' => 'url',
+	'sanitize_callback' => 'esc_url',
+	'type' => 'control'
+);
+
+/*
+ * Home feature content
+ */
+
+// Home feature content
+$options[] = array(
+	'title' => __( 'Content', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_feature_content', // section
+	'id' => 'home_feature_text', // unique ID
+	'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+	'option' => 'textarea',
+	'sanitize_callback' => 'esc_textarea',
+	'type' => 'control'
+);
+
+/*
+ * Home feature pages
+ */
+
+// Section title
+$options[] = array(
+	'title' => __( 'Section Title', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_feature_pages', // section
+	'id' => 'home_feature_pages_title', // unique ID
+	'default' => 'Special features',
+	'option' => 'text',
+	'sanitize_callback' => 'sanitize_text_field',
+	'type' => 'control'
+);
+
+// Feature page 1
+$options[] = array( 'title' => __( 'Select first page', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_feature_pages', // section
+	'id' => 'home_feature_page_first', // unique ID
+	'default' => 0,
+	'option' => 'pages',
+	'sanitize_callback' => '',
+	'type' => 'control'
+);
+
+// Feature page 2
+$options[] = array( 'title' => __( 'Select second page', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_feature_pages', // section
+	'id' => 'home_feature_page_second', // unique ID
+	'default' => 0,
+	'option' => 'pages',
+	'sanitize_callback' => '',
+	'type' => 'control'
+);
+
+// Feature page 3
+$options[] = array( 'title' => __( 'Select third page', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_feature_pages', // section
+	'id' => 'home_feature_page_third', // unique ID
+	'default' => 0,
+	'option' => 'pages',
+	'sanitize_callback' => '',
+	'type' => 'control'
+);
+
+/*
+ * Site features
+ */
+
+// Section title
+$options[] = array(
+	'title' => __( 'Section Title', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_theme_features', // section
+	'id' => 'home_theme_feature_title', // unique ID
+	'default' => 'Theme features',
+	'option' => 'text',
+	'sanitize_callback' => 'sanitize_text_field',
 	'type' => 'control'
 );
 
