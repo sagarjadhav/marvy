@@ -6,46 +6,71 @@ module.exports = function ( grunt ) {
 	require( 'load-grunt-tasks' )( grunt );
 
 	grunt.initConfig( {
-		// SCSS and Compass
-		// Ref. https://npmjs.org/package/grunt-contrib-compass
-		compass: {
-			frontend: {
+		// watch for changes and trigger sass, jshint, uglify and livereload
+		watch: {
+			sass: {
+				files: [ 'sass/**/*.{scss,sass}' ],
+				tasks: [ 'sass', 'autoprefixer' ]
+			},
+			js: {
+				files: '<%= jshint.all %>',
+				tasks: [ 'jshint', 'uglify' ]
+			}
+		},
+		// sass
+		sass: {
+			dist: {
 				options: {
-					config: 'config.rb',
-					force: true
+					style: 'expanded'
+				},
+				files: {
+					'style.css': 'sass/style.scss'
 				}
 			}
 		},
-		// Uglify
-		// Compress and Minify JS files in js/rtp-main-lib.js
-		// Ref. https://npmjs.org/package/grunt-contrib-uglify
-		uglify: {
+		// autoprefixer
+		autoprefixer: {
 			options: {
-				banner: '/*! \n * Marvy JavaScript Library \n * @package Marvy \n */'
+				browsers: [ 'last 2 versions', 'ie 9', 'ios 6', 'android 4' ],
+				map: true
 			},
-			build: {
-				src: [
-					'assets/js/vendors/hammer.min.js',
-					'assets/js/vendors/sideNav.js',
-					'assets/js/scripts.js'
-				],
-				dest: 'assets/js/package-min.js'
+			files: {
+				expand: true,
+				flatten: true,
+				src: '*.css',
+				dest: ''
 			}
 		},
-		// Watch for hanges and trigger compass and uglify
-		// Ref. https://npmjs.org/package/grunt-contrib-watch
-		watch: {
-			compass: {
-				files: [ '**/*.{scss,sass}' ],
-				tasks: [ 'compass' ]
+		// javascript linting with jshint
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc',
+				"force": true
 			},
-			uglify: {
-				files: '<%= uglify.build.src %>',
-				tasks: [ 'uglify' ]
+			all: [
+				'gruntfile.js',
+				'js/**/*.js'
+			]
+		},
+		// uglify to concat, minify, and make source maps
+		uglify: {
+			frontend: {
+				options: {
+					sourceMap: 'js/main.js.map',
+					sourceMappingURL: 'main.js.map',
+					sourceMapPrefix: 2
+				},
+				files: {
+					'js/main.min.js': [
+						'js/navigation.js',
+						'js/skip-link-focus-fix.js',
+								//'js/scripts.js'
+					]
+				}
 			}
 		}
 	} );
 
-	// Register Task
-	grunt.registerTask( 'default', [ 'watch' ] );
+	// register task
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'uglify', 'watch' ] );
 };
