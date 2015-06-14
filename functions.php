@@ -116,12 +116,9 @@ function marvy_scripts() {
 	//wp_register_style( 'open-sans', false );
 
 	wp_enqueue_style( 'marvy-google-font', '//fonts.googleapis.com/css?family=Roboto:100,500,300,400' );
-	wp_enqueue_style( 'marvy-icon-font', get_template_directory_uri() . '/assets/font/themify-icons.css' );
 	wp_enqueue_style( 'marvy-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'marvy-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'marvy-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'marvy-js', get_template_directory_uri() . '/js/main.min.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
