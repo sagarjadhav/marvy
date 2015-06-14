@@ -2323,7 +2323,7 @@ dt {
   letter-spacing: 0.025em;
 }
 .home-banner:after {
-  background: url("./assets/img/header-bg.png") no-repeat 50% 100%;
+  background: url("./img/header-bg.png") no-repeat 50% 100%;
   bottom: 0;
   content: ' ';
   height: 166px;
