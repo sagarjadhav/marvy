@@ -11,4 +11,21 @@ Text Domain: marvy
 Tags: black
 */
 
-@import "marvy/marvy";
+@import "marvy/variables";
+@import "marvy/functions";
+@import "marvy/mixins";
+@import "marvy/placeholder";
+
+@import "marvy/normalize";
+@import "marvy/elements";
+@import "marvy/form";
+
+@import "marvy/utility";
+@import "marvy/wp";
+@import "marvy/typography";
+@import "marvy/grid";
+@import "marvy/header";
+@import "marvy/nav";
+@import "marvy/home";
+@import "marvy/icons";
+@import "marvy/blog";

@@ -1,17 +1,61 @@
 // ***** Constant Variables ***** //
-$black: #000000;
-$white: #FFFFFF;
-$dark: #222222;
-$gray: #666666;
-$light: #EEEEEE;
+$color_black: #000;
+$color_white: #FFF;
+$color_gray: #666;
 $rem-base: 16px;
-$space: 26px;
-$border: #DDDDDD;
-$link: #4183c4;
 
-// ***** Messages Colors ***** //
-$notice: #BBBBBB;
-$info: #2EA2CC;
-$warning: #FFBA00;
-$success: #7AD03A;
-$error: #DD3D36;
+// Colors
+$color__link: #2a75ba;
+$color__link-visited: $color__link;
+$color__link-hover: $color__link;
+
+$color__background-body: #f1f1f1;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ddd;
+$color__background-button: #aaa;
+$color__background-pre: #f5f5f5;
+$color__background-ins: #fff9c0;
+$color__background-light: #f6f6f6;
+
+$color__text-site: #444;
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__text-main: #404040;
+
+$color__border-light: #ddd;
+$color__border-button: #ccc #ccc #bbb;
+
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+// Typo
+$font__main: 'Roboto', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+$font__icon: 'themify';
+
+//rem base
+$font__rem-base: 16px;
+$font__base-font-size: 16px;
+$font__base-line-height: 26px;
+
+// Heading sizes
+$font__size-h1: 28px;
+$font__size-h2: 26px;
+$font__size-h3: 24px;
+$font__size-h4: 20px;
+$font__size-h5: 18px;
+$font__size-h6: 16px;
+
+/* GRID */
+$grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+$grid-width: 1080px !default;
+
+
+$grid-large-breakpoint: 1025px !default;
+$grid-medium-breakpoint: 641px !default;

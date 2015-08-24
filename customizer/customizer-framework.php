@@ -87,7 +87,7 @@ function wpc_customizer_register( $wp_customize ) {
 
 			$priority = ( isset( $option[ 'priority' ] ) ) ? $option[ 'priority' ] : $i + 10;
 			$theme_supports = ( isset( $option[ 'theme_supports' ] ) ) ? $option[ 'theme_supports' ] : '';
-			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Panel', 'wpc' );
+			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Panel', 'marvy' );
 			$description = ( isset( $option[ 'description' ] ) ) ? esc_attr( $option[ 'description' ] ) : '';
 
 			$wp_customize->add_panel( $option[ 'id' ], array(
@@ -104,7 +104,7 @@ function wpc_customizer_register( $wp_customize ) {
 
 			$priority = ( isset( $option[ 'priority' ] ) ) ? $option[ 'priority' ] : $i + 10;
 			$theme_supports = ( isset( $option[ 'theme_supports' ] ) ) ? $option[ 'theme_supports' ] : '';
-			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Section', 'wpc' );
+			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Section', 'marvy' );
 			$description = ( isset( $option[ 'description' ] ) ) ? esc_attr( $option[ 'description' ] ) : '';
 			$panel = ( isset( $option[ 'panel' ] ) ) ? esc_attr( $option[ 'panel' ] ) : '';
 
@@ -125,7 +125,7 @@ function wpc_customizer_register( $wp_customize ) {
 			$section = ( isset( $option[ 'section' ] ) ) ? esc_attr( $option[ 'section' ] ) : '';
 			$default = ( isset( $option[ 'default' ] ) ) ? $option[ 'default' ] : '';
 			$transport = ( isset( $option[ 'transport' ] ) ) ? esc_attr( $option[ 'transport' ] ) : 'refresh';
-			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Section', 'wpc' );
+			$title = ( isset( $option[ 'title' ] ) ) ? esc_attr( $option[ 'title' ] ) : __( 'Untitled Section', 'marvy' );
 			$description = ( isset( $option[ 'description' ] ) ) ? esc_attr( $option[ 'description' ] ) : '';
 			$form_field = ( isset( $option[ 'option' ] ) ) ? esc_attr( $option[ 'option' ] ) : 'option';
 			$sanitize_callback = ( isset( $option[ 'sanitize_callback' ] ) ) ? esc_attr( $option[ 'sanitize_callback' ] ) : '';

@@ -1,86 +1,237 @@
-# Copyright (C) 2015 Automattic
+# Copyright (C) 2015 Sagar Jadhav
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
+"Project-Id-Version: Marvy 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-23 06:55:24+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Marvy\n"
+"Language-Team: Marvy\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
 msgstr ""
 
 #: 404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
-
 #: 404.php:44
+#. translators: %1$s: smiley
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:28
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:35 comments.php:52
+#: comments.php:38 comments.php:59
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
-msgid "&larr; Older Comments"
+#: comments.php:41 comments.php:62
+msgid "Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
-msgid "Newer Comments &rarr;"
+#: comments.php:42 comments.php:63
+msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:75
 msgid "Comments are closed."
 msgstr ""
 
-#: content-none.php:13
-msgid "Nothing Found"
+#: customizer/customizer-framework.php:90
+msgid "Untitled Panel"
 msgstr ""
 
-#: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: customizer/customizer-framework.php:107
+#: customizer/customizer-framework.php:128
+msgid "Untitled Section"
 msgstr ""
 
-#: content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+#. Template Name of the plugin/theme
+msgid "Home Page"
 msgstr ""
 
-#: content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+#: customizer/customizer-marvy.php:37
+msgid "Header Banner"
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:29
-msgid "Pages:"
+#: customizer/customizer-marvy.php:47
+msgid "Feature Content"
 msgstr ""
 
-#: content-page.php:25 inc/template-tags.php:126
-msgid "Edit"
+#: customizer/customizer-marvy.php:57
+msgid "Feature Pages"
 msgstr ""
 
-#. translators: %s: Name of current post
+#: customizer/customizer-marvy.php:67
+msgid "Theme Features"
+msgstr ""
 
-#: content.php:22
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#: customizer/customizer-marvy.php:86
+msgid "Background"
+msgstr ""
+
+#: customizer/customizer-marvy.php:99 customizer/customizer-marvy.php:139
+msgid "Content"
+msgstr ""
+
+#: customizer/customizer-marvy.php:111
+msgid "Button Text"
+msgstr ""
+
+#: customizer/customizer-marvy.php:123
+msgid "Button Link"
+msgstr ""
+
+#: customizer/customizer-marvy.php:155 customizer/customizer-marvy.php:204
+msgid "Section Title"
+msgstr ""
+
+#: customizer/customizer-marvy.php:166
+msgid "Select first page"
+msgstr ""
+
+#: customizer/customizer-marvy.php:177
+msgid "Select second page"
+msgstr ""
+
+#: customizer/customizer-marvy.php:188
+msgid "Select third page"
+msgstr ""
+
+#: customizer/customizer-sample.php:23
+msgid "Example Panel"
+msgstr ""
+
+#: customizer/customizer-sample.php:24 customizer/customizer-sample.php:33
+msgid "Panel description."
+msgstr ""
+
+#: customizer/customizer-sample.php:32
+msgid "Example Panel 2"
+msgstr ""
+
+#: customizer/customizer-sample.php:46
+msgid "Standard Form Fields"
+msgstr ""
+
+#: customizer/customizer-sample.php:47 customizer/customizer-sample.php:57
+#: customizer/customizer-sample.php:67
+msgid "Section description"
+msgstr ""
+
+#: customizer/customizer-sample.php:56
+msgid "WordPress 4.0+ Fields"
+msgstr ""
+
+#: customizer/customizer-sample.php:66
+msgid "WordPress Data"
+msgstr ""
+
+#: customizer/customizer-sample.php:81
+msgid "Text Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:93
+msgid "Textarea Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:105
+msgid "Color Picker Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:117
+msgid "Radio Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:134
+msgid "Checkbox Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:147
+msgid "Select Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:164
+msgid "Image Upload Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:176
+msgid "File Upload Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:188
+msgid "URL Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:200
+msgid "Email Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:212
+msgid "Password Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:223
+msgid "Range Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:240
+msgid "Pages Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:252
+msgid "Categories Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:264
+msgid "Tags Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:276
+msgid "Post Types Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:288
+msgid "Posts Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:300
+msgid "Users Field"
+msgstr ""
+
+#: customizer/customizer-sample.php:312
+msgid "Menus Field"
+msgstr ""
+
+#: customizer/inc/class-wp-customize-control.php:49
+#: customizer/inc/class-wp-customize-control.php:94
+#: customizer/inc/class-wp-customize-control.php:139
+#: customizer/inc/class-wp-customize-control.php:182
+#: customizer/inc/class-wp-customize-control.php:226
+#: customizer/inc/class-wp-customize-control.php:269
+msgid "&mdash; Select &mdash;"
 msgstr ""
 
 #: footer.php:15
@@ -95,11 +246,11 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:53 header.php:31
+#: functions.php:57 header.php:37
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:106
 msgid "Sidebar"
 msgstr ""
 
@@ -107,7 +258,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:64
+#: inc/extras.php:52
 msgid "Page %s"
 msgstr ""
 
@@ -127,18 +278,8 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:86
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:91
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:108 inc/template-tags.php:114
+#. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
@@ -162,6 +303,10 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
+#: inc/template-tags.php:126 template-parts/content-page.php:25
+msgid "Edit"
+msgstr ""
+
 #: inc/template-tags.php:143
 msgid "Category: %s"
 msgstr ""
@@ -178,13 +323,103 @@ msgstr ""
 msgid "Year: %s"
 msgstr ""
 
+#: inc/template-tags.php:151
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:153
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:175
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/template-tags.php:179
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:181
+msgid "Archives"
+msgstr ""
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:18 template-parts/content-single.php:20
+#: template-parts/content.php:29
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:22
+#. translators: %s: Name of current post
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Marvy"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://frontendmonster.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WordPress theme framework with Custom Menu, Header and Background along "
+"with Logo, Favicon, Featured Image, Google Custom Search Integration and "
+"more options. Now includes a Foundation 5 framework, Grunt Task Runner, "
+"Bower package manager, SAAS based CSS preprocessor and translation support. "
+"This theme comes with free technical support by team of 30+ full-time "
+"developers."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sagar Jadhav"
+msgstr ""
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:86
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:91
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
 #: inc/template-tags.php:149
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgid "Month: %s"
 msgstr ""
 
 #: inc/template-tags.php:151
@@ -193,92 +428,51 @@ msgid "F Y"
 msgstr ""
 
 #: inc/template-tags.php:153
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:153
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:155
+#: inc/template-tags.php:156
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:158
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:159
+#: inc/template-tags.php:160
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:161
+#: inc/template-tags.php:162
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:163
+#: inc/template-tags.php:164
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:165
+#: inc/template-tags.php:166
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:167
+#: inc/template-tags.php:168
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:169
+#: inc/template-tags.php:170
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:172
 msgctxt "post format archive title"
 msgid "Chats"
-msgstr ""
-
-#: inc/template-tags.php:173
-msgid "Archives: %s"
-msgstr ""
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-
-#: inc/template-tags.php:177
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:179
-msgid "Archives"
-msgstr ""
-
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr ""
-#. Theme Name of the plugin/theme
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://automattic.com/"
 msgstr ""

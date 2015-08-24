@@ -1,22 +1,37 @@
+.home-section {
+	padding: rem-calc(80 0);
+
+	h2 {
+		font-size: rem-calc(35);
+		font-weight: 300;
+		line-height: 1;
+		margin-bottom: rem-calc(80);
+		text-align: center;
+	}
+}
+
 .home-feature-content {
 	padding: rem-calc(20 0);
 	text-align: center;
 }
 
-.home-feature-pages {
+.home-feature-pages,
+.home-latest-blog {
 	background-color: #f5f5f5;
     border-top: 1px solid #eeeeee;
 }
 
-.home-section {
-	padding: rem-calc(80 0);
+.home-about-section {
+	padding: 3rem 0;
+}
+
+.home-about-content {
+	font-size: 18px;
+    font-weight: 300;
+    text-align: center;
 
 	h2 {
-		font-size: rem-calc(40);
-		font-weight: 300;
-		line-height: 1;
-		margin-bottom: rem-calc(80);
-		text-align: center;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -26,7 +41,7 @@
 	position: relative;
 
 	&:after {
-		background: rgba($black, 0.35);
+		background: rgba($color_black, 0.35);
 		content: ' ';
 		position: absolute;
 		left: 0;
@@ -40,7 +55,7 @@
 		font-size: 16px;
 		font-weight: 300;
 		margin: 0;
-		@include tracking(25);
+		@include letter-spacing(25);
 		padding: rem-calc(0 20 20);
 		position: absolute;
 		width: 100%;
@@ -48,20 +63,26 @@
 	}
 
 	a {
-		color: $white;
+		color: $color_white;
 		text-decoration: none;
 	}
 
 }
 
 .home-theme-features {
-	font-size: rem-calc(14);
+	font-size: rem-calc(15);
+    font-weight: 300;
+	padding-bottom: 1rem;
 	text-align: center;
 
 	h4 {
-		font-size: rem-calc(20);
-		font-weight: 300;
+		font-size: rem-calc(19);
+		font-weight: 400;
 		margin-bottom: rem-calc(20);
+	}
+
+	li {
+		margin-bottom: 4rem;
 	}
 
 	.icon {
@@ -72,6 +93,7 @@
 	}
 
 	p {
-		padding: rem-calc(0 30);
+		margin: 0;
+		padding: rem-calc(0 15);
 	}
 }

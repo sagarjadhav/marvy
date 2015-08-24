@@ -5,7 +5,7 @@ if ( ! function_exists( 'marvy_customize_css' ) ) {
 		?>
 
 		<style>
-			.site-header { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
+			.site-header, .home-banner { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 		</style>
 
 		<?php

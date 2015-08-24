@@ -1,27 +1,50 @@
+// @param $font-size - font size value, default is $font__base-font-size
+// @param $line-height - true or flase, default is false
+//
+// @group helpers
+//
+// @example scss - Usage
+// .site-title {
+//     @include font-size(50);
+// }
+//
+// @example css - CSS output
+// site-title {
+//     font-size: 3.125rem;
+// }
+@mixin font-size($font-size: $font__base-font-size, $line-height: false) {
+    font-size: rem-calc($font-size);
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $font__base-line-height) * ($font__base-line-height / $font-size);
+    }
+
+}
+
 // @param {Integer} $psvalue - The value should be the same value as in Photoshop, required
 //
 // @group helpers
 //
 // @example scss - Usage
 // .wide-tracking {
-// @include tracking(50);
+//     @include letter-spacing(50);
 // }
 //
 // @example css - CSS output
 // .wide-tracking {
-// letter-spacing: .05em;
+//     letter-spacing: .05rem;
 // }
 
-@mixin tracking($psvalue) {
-    letter-spacing: $psvalue / 1000 + em;
+@mixin letter-spacing( $psvalue ) {
+    letter-spacing: $psvalue / 1000 + rem;
 }
-
 
 // We use this to do clear floats
 @mixin clearfix {
-	&:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+	@extend %clearfix;
+}
+
+// Bottom space
+@mixin bottom-space {
+	margin-bottom: rem-calc($font__base-line-height);
 }

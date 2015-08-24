@@ -1,8 +1,8 @@
-<div class="row">
+<div class="home-section home-banner">
 
-	<div class="column large-12">
+	<div class="row">
 
-		<div class="home-banner">
+		<div class="column large-12 column-middle">
 
 			<div class="banner-content">
 				<?php echo html_entity_decode( get_option( 'home_banner_text' ) ); ?>

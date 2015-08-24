@@ -28,7 +28,6 @@ $options[] = array(
 	'type' => 'panel'
 );
 
-
 /* ---------------------------------------------------------------------------------------------------
   Sections
   --------------------------------------------------------------------------------------------------- */
@@ -38,17 +37,15 @@ $options[] = array(
 	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel' => 'home_panel', // panel
 	'id' => 'home_banner_section', // unique ID
-	'priority' => 10,
 	'theme_supports' => '',
 	'type' => 'section'
 );
 
 $options[] = array(
-	'title' => __( 'Feature Content', 'marvy' ), // Section name
+	'title' => __( 'About Content', 'marvy' ), // Section name
 	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel' => 'home_panel', // panel
-	'id' => 'home_feature_content', // unique ID
-	'priority' => 10,
+	'id' => 'home_about_content', // unique ID
 	'theme_supports' => '',
 	'type' => 'section'
 );
@@ -58,17 +55,24 @@ $options[] = array(
 	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel' => 'home_panel', // panel
 	'id' => 'home_feature_pages', // unique ID
-	'priority' => 10,
 	'theme_supports' => '',
 	'type' => 'section'
 );
 
 $options[] = array(
-	'title' => __( 'Theme Features', 'marvy' ), // Section name
+	'title' => __( 'Marvy Features', 'marvy' ), // Section name
 	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel' => 'home_panel', // panel
 	'id' => 'home_theme_features', // unique ID
-	'priority' => 10,
+	'theme_supports' => '',
+	'type' => 'section'
+);
+
+$options[] = array(
+	'title' => __( 'Latest Blog', 'marvy' ), // Section name
+	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
+	'panel' => 'home_panel', // panel
+	'id' => 'home_latest_blog', // unique ID
 	'theme_supports' => '',
 	'type' => 'section'
 );
@@ -138,9 +142,9 @@ $options[] = array(
 $options[] = array(
 	'title' => __( 'Content', 'marvy' ), // Control label
 	'description' => '', // Control description
-	'section' => 'home_feature_content', // section
-	'id' => 'home_feature_text', // unique ID
-	'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+	'section' => 'home_about_content', // section
+	'id' => 'home_about_text', // unique ID
+	'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore <br>magna ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
 	'option' => 'textarea',
 	'sanitize_callback' => 'esc_textarea',
 	'type' => 'control'
@@ -206,6 +210,22 @@ $options[] = array(
 	'section' => 'home_theme_features', // section
 	'id' => 'home_theme_feature_title', // unique ID
 	'default' => 'Theme features',
+	'option' => 'text',
+	'sanitize_callback' => 'sanitize_text_field',
+	'type' => 'control'
+);
+
+/*
+ * Latest blog
+ */
+
+// Section title
+$options[] = array(
+	'title' => __( 'Blog Title', 'marvy' ), // Control label
+	'description' => '', // Control description
+	'section' => 'home_latest_blog', // section
+	'id' => 'home_blog_title', // unique ID
+	'default' => 'Latest Blog',
 	'option' => 'text',
 	'sanitize_callback' => 'sanitize_text_field',
 	'type' => 'control'

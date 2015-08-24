@@ -46,7 +46,7 @@ class WPC_Customize_Categories_Control extends WP_Customize_Control {
 				array(
 					'name' => '_customize-dropdown-categories-' . $this->id,
 					'echo' => 0,
-					'show_option_none' => __( '&mdash; Select &mdash;' ),
+					'show_option_none' => __( '&mdash; Select &mdash;', 'marvy' ),
 					'option_none_value' => '0',
 					'hierarchical' => 1,
 					'selected' => $this->value(),
@@ -91,7 +91,7 @@ class WPC_Customize_Menus_Control extends WP_Customize_Control {
 				<span class="description customize-control-description"><?php echo $this->description; ?></span>
 			<?php endif; ?>
 			<select <?php $this->link(); ?>>
-				<option value=""><?php _e( '&mdash; Select &mdash;' ); ?></option>
+				<option value=""><?php _e( '&mdash; Select &mdash;', 'marvy' ); ?></option>
 				<?php
 				foreach ( $this->menus as $menu ) {
 					printf(
@@ -136,7 +136,7 @@ class WPC_Customize_Users_Control extends WP_Customize_Control {
 			<?php endif; ?>
 
 			<select <?php $this->link(); ?>>
-				<option value=""><?php _e( '&mdash; Select &mdash;' ); ?></option>
+				<option value=""><?php _e( '&mdash; Select &mdash;', 'marvy' ); ?></option>
 				<?php
 				foreach ( $this->users as $user ) {
 					printf(
@@ -179,7 +179,7 @@ class WPC_Customize_Posts_Control extends WP_Customize_Control {
 				<span class="description customize-control-description"><?php echo $this->description; ?></span>
 			<?php endif; ?>
 			<select <?php $this->link(); ?>>
-				<option value=""><?php _e( '&mdash; Select &mdash;' ); ?></option>
+				<option value=""><?php _e( '&mdash; Select &mdash;', 'marvy' ); ?></option>
 				<?php
 				foreach ( $this->posts as $post ) {
 					printf( '<option value="%s" %s>%s</option>', $post->ID, selected( $this->value(), $post->ID, false ), $post->post_title
@@ -223,7 +223,7 @@ class WPC_Customize_Post_Type_Control extends WP_Customize_Control {
 			<?php endif; ?>
 
 			<select <?php $this->link(); ?>>
-				<option value=""><?php _e( '&mdash; Select &mdash;' ); ?></option>
+				<option value=""><?php _e( '&mdash; Select &mdash;', 'marvy' ); ?></option>
 				<?php
 				foreach ( $this->post_types as $k => $post_type ) {
 					printf(
@@ -266,7 +266,7 @@ class WPC_Customize_Tags_Control extends WP_Customize_Control {
 			<?php endif; ?>
 
 			<select <?php $this->link(); ?>>
-				<option value=""><?php _e( '&mdash; Select &mdash;' ); ?></option>
+				<option value=""><?php _e( '&mdash; Select &mdash;', 'marvy' ); ?></option>
 				<?php
 				foreach ( $this->tags as $tag ) {
 					printf(

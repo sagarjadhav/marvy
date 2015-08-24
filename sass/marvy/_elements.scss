@@ -1,0 +1,88 @@
+/**
+ * 1. Set the global `box-sizing` state to `border-box`.
+ *    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * 2. Set font family. [normalize.css]
+ * 3. Set the base element’s `font-size` to the value of your choosing.
+ * 4. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ * 5. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom. [normalize.css]
+ *
+ */
+
+html {
+	box-sizing: border-box; /* [1] */
+	font-family: $font__main; /* [2] */
+
+	@include font-size($line-height: true); /* [3] */ /* [4] */
+
+	-ms-text-size-adjust: 100%; /* [5] */
+	-webkit-text-size-adjust: 100%; /* [5] */
+
+	color: $color__text-site; /* [additional] */
+}
+
+
+/**
+ * 1. Inherit box-sizing to make it easier to change the property for components
+ *    that leverage other behavior.
+ *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit; /* [1] */
+}
+
+
+/**
+ * 1. Fallback for when there is no custom background color defined. [WordPress]
+ * 2. Remove default margin. [normalize.css]
+ */
+
+body {
+	background: $color__background-body; /* [1] */
+	margin: 0; /* [2] */
+
+	&.home {
+		background: $color_white;
+	}
+
+	// WP Editor
+	&.mce-content-body {
+		font-family: inherit;
+		margin: 15px;
+	}
+}
+
+
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10. [normalize.css]
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Make sure images are scaled correctly.
+ * 4. Fluid images for responsive purposes.
+ * 5. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ *
+ */
+
+img {
+	border: 0; /* [1] */
+	font-style: italic; /* [2] */
+	height: auto; /* [3] */
+    max-width: 100%; /* [4] */
+    vertical-align: middle; /* [5] */
+}
+
+
+/* Default Links */
+a {
+    // Self, Active & Visited
+    & { color: $color__link; outline: 0; text-decoration: none; }
+
+    // Hover
+    &:hover { color: $color__link; outline: 0; text-decoration: underline; }
+}

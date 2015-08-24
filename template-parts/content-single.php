@@ -11,15 +11,22 @@
 		<div class="entry-meta">
 			<?php marvy_posted_on(); ?>
 		</div><!-- .entry-meta -->
+
+		<?php
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'full' );
+		}
+		?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marvy' ),
-				'after'  => '</div>',
-			) );
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marvy' ),
+			'after' => '</div>',
+		) );
 		?>
 	</div><!-- .entry-content -->
 

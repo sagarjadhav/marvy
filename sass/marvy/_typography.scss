@@ -1,197 +1,43 @@
-/**
- * Typecsset
- *
- * Typecsset is a small, unopinionated library for creating beautifully set type
- * on the web. Typecsset gives perfect vertical rhythm at any configurable font
- * size, as well as many other typographical niceties.
- */
-
-
-
-
-
-//------------------------------------\\
-// SETTINGS
-//------------------------------------\\
-// Typecsset needs some variables setting before it can get started. Some of
-// these variables can be overriden by developers, others need to remain
-// untouched because Typecsset will assign them automatically based on what
-// you’ve told it.
-
-// What would you like your base font-size to be? Define in pixels; the library
-// will convert measurements to the most appropriate units (rems or unitless).
-$typecsset-base-font-size:      16px !default;
-$typecsset-base-line-height:    $space !default;
-
-// Heading sizes
-$typecsset-h1-size:             36px !default;
-$typecsset-h2-size:             28px !default;
-$typecsset-h3-size:             24px !default;
-$typecsset-h4-size:             20px !default;
-$typecsset-h5-size:             16px !default;
-$typecsset-h6-size:             16px !default;
-
-// Would you like indented (rather than spaced) paragraph delimiting?
-$typecsset-indented-paragraphs: false !default;
-
-// Would you like to show a baseline grid? This is handy during development.
-$typecsset-show-baseline:       false !default;
-
-// Do not modify these variables; they are internal settings upon which the
-// library depends.
-$typecsset-magic-number:        $typecsset-base-line-height;
-$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
-
-
-
-
-
-//------------------------------------\\
-// TOOLS
-//------------------------------------\\
-// Typecsset has a number of its own tools which it uses to generate its CSS
-// more efficiently.
-
-// Quickly generate a font-size in rems, with a pixel fallback, based on the
-// value we pass into the mixin, e.g.:
-//
-// h1 {
-//     @include typecsset-font-size(24px);
-// }
-//
-@mixin typecsset-font-size($font-size, $line-height: true) {
-    font-size: $font-size;
-    font-size: ($font-size / $typecsset-base-font-size) * 1rem;
-
-    @if $line-height == true {
-        line-height: ceil($font-size / $typecsset-base-line-height) * ($typecsset-base-line-height / $font-size);
-    }
-
-}
-
-// Space elements by an amount based on your magic number. Pass in the property
-// to be indented as a paramater, e.g.:
-//
-// pre {
-//     @include typecsset-space(padding-left);
-// }
-//
-@mixin typecsset-space($property) {
-    #{$property}: 2 * $typecsset-magic-number;
-    #{$property}: 2 * $typecsset-magic-ratio + rem;
-}
-
-// A small, internally-used function to remove the units from a given value.
-@function typecsset-strip-units($number) {
-    @return $number / ($number * 0 + 1);
-}
-
-
-
-
-
-/*------------------------------------*\
-    #SHARED
-\*------------------------------------*/
-/**
- * A lot of elements in Typecsset need to share some declarations (mainly for
- * vertical rhythm), so we `@extend` some silent classes.
- */
-%typecsset-reset {
-    margin:  0;
-    padding: 0;
-}
-
-%typecsset-vertical-rhythm {
-    @extend %typecsset-reset;
-    margin-bottom: $typecsset-magic-number;
-    margin-bottom: $typecsset-magic-ratio + rem;
-}
-
-
-
-
-
-/*------------------------------------*\
-    #BASE
-\*------------------------------------*/
-/**
- * 1. Set the base element’s `font-size` to the value of your choosing. Set in
- *    ems, assuming a browser default of 16px.
- * 2. Work out the unitless `line-height` for your project based around your
- *    desired `line-height` (defined previously in pixels), and your project’s
- *    base font size.
- */
-
-@if $typecsset-show-baseline == true {
-	/**
-	 * 3. If you have chosen to display a baseline grid, we turn it on here.
-	 */
-}
-
-html {
-	color: #333;
-	font-family: 'Roboto', sans-serif;
-    font-size: $typecsset-base-font-size; /* [1] */
-    line-height: $typecsset-base-line-height / $typecsset-base-font-size; /* [2] */
-
-    // If you have chosen to display a baseline grid, we turn it on here.
-    @if $typecsset-show-baseline == true {
-
-        $typecsset-baseline-size: typecsset-strip-units($typecsset-magic-number);
-
-        background-image: url(http://basehold.it/i/#{$typecsset-baseline-size}); /* [3] */
-}
-
-}
-
-
-
-
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
 h1 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h1-size);
+	@include font-size($font__size-h1, $line-height: true);
+	/*font-weight: 400;*/
+	@extend %vertical-rhythm;
+	@include letter-spacing(50);
 }
 
 h2 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h2-size);
+	@include font-size($font__size-h2, $line-height: true);
+	/*font-weight: 400;*/
+	@extend %vertical-rhythm;
 }
 
 h3 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h3-size);
+	@include font-size($font__size-h3, $line-height: true);
+	@extend %vertical-rhythm;
 }
 
 h4 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h4-size);
+	@include font-size($font__size-h4, $line-height: true);
+	@extend %vertical-rhythm;
 }
 
 h5 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h5-size);
+	@include font-size($font__size-h5, $line-height: true);
+	@extend %vertical-rhythm;
 }
 
 h6 {
-    @extend %typecsset-vertical-rhythm;
-    @include typecsset-font-size($typecsset-h6-size);
+	@include font-size($font__size-h6, $line-height: true);
+	@extend %vertical-rhythm;
 }
 
-
-
-
-
-/*------------------------------------*\
-    #LISTS
-\*------------------------------------*/
+// Lists
 ul, ol, dd {
-    @extend %typecsset-vertical-rhythm;
-    //@include typecsset-space(margin-left);
-	margin-left: $typecsset-base-line-height;
+    @extend %vertical-rhythm;
+    margin-left: rem-calc($font__base-line-height);
 }
 
 li > ul,
@@ -199,130 +45,142 @@ li > ol {
     margin-bottom: 0;
 }
 
-// Added by S@gar
-figure {
-	@extend %typecsset-vertical-rhythm;
-}
-
-
-/*------------------------------------*\
-    #PARAGRAPHS
-\*------------------------------------*/
-p {
-    @extend %typecsset-vertical-rhythm;
-
-    @if $typecsset-indented-paragraphs == true {
-
-        + p {
-            @include typecsset-space(text-indent);
-            margin-top: -$typecsset-magic-number;
-            margin-top: -$typecsset-magic-ratio + rem;
-        }
-
-    }
-
-}
-
-/**
- * Not strictly a paragraph, but probably doesn’t need its own section.
- */
-address {
-    @extend %typecsset-vertical-rhythm;
-}
-
-
-
-
-
-/*------------------------------------*\
-    #CODE
-\*------------------------------------*/
-pre {
-    @extend %typecsset-vertical-rhythm;
-    border: 0 none;
-    border-radius: 3px;
-    font-size: 88%;
-    overflow: auto;
-    padding: 16px;
-}
-
-code {
-    border-radius: 3px;
-    font-size: 88%;
-    margin: 0;
-    padding: 0.2em 0;
-}
-
-.breadcrumbs {
-    border-radius: 3px;
-    font-size: 88%;
-    padding: rem-calc(8 16);
-}
-
-/*------------------------------------*\
-    #QUOTES
-\*------------------------------------*/
-blockquote {
-	@extend %typecsset-vertical-rhythm;
-	border-left: 4px solid $border;
-    color: #777;
-    padding: 0 15px;
-}
-
-/*------------------------------------*\
-    #TABLES
-\*------------------------------------*/
 /**
  * Crude table styles; tables are very difficult to keep on the baseline.
  */
 table {
-    @extend %typecsset-vertical-rhythm;
-    width: 100%;
-    border-collapse: collapse;
+	border-collapse: collapse;
     border-spacing: 0;
-}
-
-tr {
-    border-top: 1px solid $border;
-
-	&:nth-child(2n) {
-		background-color: #f8f8f8;
-	}
-
-	.rtp-skin-sepia & {
-		border-top-color: #f5d06c;
-
-		&:nth-child(2n) {
-			background-color: #fbeecb;
-		}
-	}
-
-	.rtp-skin-night & {
-		border-top-color: #444;
-
-		&:nth-child(2n) {
-			background-color: #222;
-		}
-	}
+    @extend %vertical-rhythm;
+    width: 100%;
 }
 
 th,
 td {
-    border: 1px solid $border;
-    padding: rem-calc(6 10);
+	border-bottom: 1px solid #E1E1E1;
+    padding: $font__base-line-height / 2;
+	text-align: left;
 
-	.rtp-skin-night & {
-		border-color: #444;
+
+	&:first-child {
+		padding-left: 0;
 	}
 
-	.rtp-skin-sepia & {
-		border-color: #f5d06c;
+	&:last-child {
+		padding-right: 0;
 	}
 }
 
+.rthd-comment-content {
+	th,
+	td {
+		vertical-align: top;
 
-dt {
+		&:first-child {
+			width: 18%;
+		}
+	}
+}
+
+/**
+ * Paragraphs
+ */
+
+p {
+    @extend %vertical-rhythm;
+}
+
+
+/**
+ * Not strictly a paragraph, but probably doesn’t need its own section.
+ */
+
+address {
+    @extend %vertical-rhythm;
+}
+
+
+/**
+ * CODE
+ */
+
+pre {
+	background: $color__background-pre;
+	border: 1px solid $color__border-light;
+    @extend %vertical-rhythm;
+	max-width: 100%;
+	overflow: auto; /* Contain overflow in all browsers. */
+	padding: 1rem;
+
+	code.bash,
+	& > code {
+		background: transparent;
+		border: 0;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	code code.bash {
+		font-size: inherit;
+	}
+
+}
+
+code {
+	padding: rem-calc(2 6);
+	margin: rem-calc(0 3);
+	font-size: 80%;
+	//white-space: nowrap;
+	background: $color__background-pre;
+	border: 1px solid $color__border-light;
+	border-radius: 3px;
+}
+
+
+/**
+ * 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
+ *    font-size smaller than 1em.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $font__code; /* [1] */
+}
+
+
+/**
+ * Set up quote marks on quoting elements.
+ */
+
+q,
+blockquote {
+	border-left: 4px solid #ccc;
+    color: #999;
     font-style: italic;
-    font-weight: bold;
-    padding: 0;
+    margin: rem-calc(0 0 $font__base-line-height $font__base-line-height);
+    padding-left: rem-calc(16);
+}
+
+
+/**
+ * HR
+ */
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	box-sizing: content-box; /* Address differences between Firefox and other browsers. Source- normalize.css */
+	height: 1px;
+	@extend %vertical-rhythm;
+}
+
+/**
+ * Address margin not present in IE 8/9 and Safari. [normalize.css]
+ */
+
+figure {
+	margin: rem-calc(16 26);
 }
