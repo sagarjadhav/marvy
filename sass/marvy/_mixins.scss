@@ -41,10 +41,10 @@
 
 // We use this to do clear floats
 @mixin clearfix {
-	@extend %clearfix;
+    @extend %clearfix;
 }
 
 // Bottom space
 @mixin bottom-space {
-	margin-bottom: rem-calc($font__base-line-height);
+    margin-bottom: rem-calc($font__base-line-height);
 }

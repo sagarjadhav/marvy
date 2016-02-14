@@ -2,36 +2,36 @@
     #HEADINGS
 \*------------------------------------*/
 h1 {
-	@include font-size($font__size-h1, $line-height: true);
-	/*font-weight: 400;*/
-	@extend %vertical-rhythm;
-	@include letter-spacing(50);
+    @include font-size($font__size-h1, $line-height: true);
+    /*font-weight: 400;*/
+    @extend %vertical-rhythm;
+    @include letter-spacing(50);
 }
 
 h2 {
-	@include font-size($font__size-h2, $line-height: true);
-	/*font-weight: 400;*/
-	@extend %vertical-rhythm;
+    @include font-size($font__size-h2, $line-height: true);
+    /*font-weight: 400;*/
+    @extend %vertical-rhythm;
 }
 
 h3 {
-	@include font-size($font__size-h3, $line-height: true);
-	@extend %vertical-rhythm;
+    @include font-size($font__size-h3, $line-height: true);
+    @extend %vertical-rhythm;
 }
 
 h4 {
-	@include font-size($font__size-h4, $line-height: true);
-	@extend %vertical-rhythm;
+    @include font-size($font__size-h4, $line-height: true);
+    @extend %vertical-rhythm;
 }
 
 h5 {
-	@include font-size($font__size-h5, $line-height: true);
-	@extend %vertical-rhythm;
+    @include font-size($font__size-h5, $line-height: true);
+    @extend %vertical-rhythm;
 }
 
 h6 {
-	@include font-size($font__size-h6, $line-height: true);
-	@extend %vertical-rhythm;
+    @include font-size($font__size-h6, $line-height: true);
+    @extend %vertical-rhythm;
 }
 
 // Lists
@@ -49,7 +49,7 @@ li > ol {
  * Crude table styles; tables are very difficult to keep on the baseline.
  */
 table {
-	border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     @extend %vertical-rhythm;
     width: 100%;
@@ -57,29 +57,29 @@ table {
 
 th,
 td {
-	border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
     padding: $font__base-line-height / 2;
-	text-align: left;
+    text-align: left;
 
 
-	&:first-child {
-		padding-left: 0;
-	}
+    &:first-child {
+        padding-left: 0;
+    }
 
-	&:last-child {
-		padding-right: 0;
-	}
+    &:last-child {
+        padding-right: 0;
+    }
 }
 
 .rthd-comment-content {
-	th,
-	td {
-		vertical-align: top;
+    th,
+    td {
+        vertical-align: top;
 
-		&:first-child {
-			width: 18%;
-		}
-	}
+        &:first-child {
+            width: 18%;
+        }
+    }
 }
 
 /**
@@ -105,36 +105,36 @@ address {
  */
 
 pre {
-	background: $color__background-pre;
-	border: 1px solid $color__border-light;
+    background: $color__background-pre;
+    border: 1px solid $color__border-light;
     @extend %vertical-rhythm;
-	max-width: 100%;
-	overflow: auto; /* Contain overflow in all browsers. */
-	padding: 1rem;
+    max-width: 100%;
+    overflow: auto; /* Contain overflow in all browsers. */
+    padding: 1rem;
 
-	code.bash,
-	& > code {
-		background: transparent;
-		border: 0;
-		display: block;
-		margin: 0;
-		padding: 0;
-	}
+    code.bash,
+    & > code {
+        background: transparent;
+        border: 0;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
 
-	code code.bash {
-		font-size: inherit;
-	}
+    code code.bash {
+        font-size: inherit;
+    }
 
 }
 
 code {
-	padding: rem-calc(2 6);
-	margin: rem-calc(0 3);
-	font-size: 80%;
-	//white-space: nowrap;
-	background: $color__background-pre;
-	border: 1px solid $color__border-light;
-	border-radius: 3px;
+    padding: rem-calc(2 6);
+    margin: rem-calc(0 3);
+    font-size: 80%;
+    //white-space: nowrap;
+    background: $color__background-pre;
+    border: 1px solid $color__border-light;
+    border-radius: 3px;
 }
 
 
@@ -157,7 +157,7 @@ samp {
 
 q,
 blockquote {
-	border-left: 4px solid #ccc;
+    border-left: 4px solid #ccc;
     color: #999;
     font-style: italic;
     margin: rem-calc(0 0 $font__base-line-height $font__base-line-height);
@@ -170,11 +170,11 @@ blockquote {
  */
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	box-sizing: content-box; /* Address differences between Firefox and other browsers. Source- normalize.css */
-	height: 1px;
-	@extend %vertical-rhythm;
+    background-color: $color__background-hr;
+    border: 0;
+    box-sizing: content-box; /* Address differences between Firefox and other browsers. Source- normalize.css */
+    height: 1px;
+    @extend %vertical-rhythm;
 }
 
 /**
@@ -182,5 +182,5 @@ hr {
  */
 
 figure {
-	margin: rem-calc(16 26);
+    margin: rem-calc(16 26);
 }

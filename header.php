@@ -18,35 +18,44 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div id="page" class="hfeed site">
+
+		<div id="page" class="site">
+
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marvy' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
 
-				<div class="site-header-inner">
+				<div class="container">
 
-					<div class="row">
+					<div class="grid">
 
-						<div class="column large-12">
+						<div class="grid-cell">
 							<div class="site-branding">
-								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-								<!--<h2 class="site-description"><?php // bloginfo( 'description' );             ?></h2>-->
-							</div><!-- .site-branding -->
+								<?php if ( is_front_page() && is_home() ) : ?>
+									<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								<?php else : ?>
+									<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+								<?php
+								endif;
+								?>
+							</div>
+						</div>
 
+						<div class="grid-cell">
 							<nav id="site-navigation" class="main-navigation" role="navigation">
 								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'marvy' ); ?></button>
-								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-							</nav><!-- #site-navigation -->
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container' => false, 'menu_class' => 'primary-menu', ) ); ?>
+							</nav>
 						</div>
 
 					</div>
 
 				</div>
 
-			</header><!-- #masthead -->
+			</header>
 
 			<?php
-			$class = is_page_template( 'home-page.php' ) ? '' : ' row';
+			$class = is_page_template( 'templates/home.php' ) ? '' : ' container';
 			?>
 
 			<div id="content" class="site-content<?php echo $class; ?>">

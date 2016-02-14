@@ -21,9 +21,11 @@ function marvy_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'marvy_body_classes' );
 
-if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
+if ( version_compare( $GLOBALS[ 'wp_version' ], '4.1', '<' ) ) :
+
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
 	 *
@@ -48,12 +50,13 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 		}
 
 		// Add a page number if necessary:
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+		if ( ( $paged >= 2 || $page >= 2 ) && !is_404() ) {
 			$title .= " $sep " . sprintf( esc_html__( 'Page %s', 'marvy' ), max( $paged, $page ) );
 		}
 
 		return $title;
 	}
+
 	add_filter( 'wp_title', 'marvy_wp_title', 10, 2 );
 
 	/**
@@ -67,5 +70,6 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php
 	}
+
 	add_action( 'wp_head', 'marvy_render_title' );
 endif;

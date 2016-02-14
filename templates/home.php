@@ -12,6 +12,8 @@ get_header();
 <?php get_template_part( 'template-parts/home', 'feature-pages' ); ?>
 <?php get_template_part( 'template-parts/home', 'theme-features' ); ?>
 <?php get_template_part( 'template-parts/home', 'latest-blog' ); ?>
+<?php get_template_part( 'template-parts/home', 'download' ); ?>
+<?php //get_template_part( 'template-parts/home', 'social' ); ?>
 
 <?php
 

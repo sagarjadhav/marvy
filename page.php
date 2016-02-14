@@ -12,24 +12,29 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area column large-8">
-	<main id="main" class="site-main" role="main">
+<div class="grid">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<div id="primary" class="content-area grid-cell">
+		<main id="main" class="site-main" role="main">
 
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php
-			// If comments are open or we have at least one comment, load up the comment template
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			?>
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+				<?php
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+				?>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+			<?php endwhile; // end of the loop. ?>
 
-<?php get_sidebar(); ?>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<?php get_sidebar(); ?>
+
+</div>
+
 <?php get_footer(); ?>

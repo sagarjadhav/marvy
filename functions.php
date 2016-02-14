@@ -9,7 +9,7 @@
 require get_template_directory() . '/customizer/customizer-framework.php';
 require get_template_directory() . '/customizer/marvy-functions.php';
 
-if ( ! function_exists( 'marvy_setup' ) ) :
+if ( !function_exists( 'marvy_setup' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -38,7 +38,7 @@ if ( ! function_exists( 'marvy_setup' ) ) :
 		 * provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
-		
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -75,8 +75,8 @@ if ( ! function_exists( 'marvy_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'marvy_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
+			'default-color'	 => 'ffffff',
+			'default-image'	 => '',
 		) ) );
 	}
 
@@ -102,15 +102,29 @@ add_action( 'after_setup_theme', 'marvy_content_width', 0 );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function marvy_widgets_init() {
-	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'marvy' ),
-		'id' => 'sidebar-1',
-		'description' => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
+	register_sidebar(
+	array(
+		'name'			 => esc_html__( 'Sidebar', 'marvy' ),
+		'id'			 => 'sidebar-1',
+		'description'	 => '',
+		'before_widget'	 => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'	 => '</aside>',
+		'before_title'	 => '<h3 class="widget-title">',
+		'after_title'	 => '</h3>',
+	)
+	);
+
+	register_sidebar(
+	array(
+		'name'			 => esc_html__( 'Footer Sidebar', 'marvy' ),
+		'id'			 => 'sidebar-2',
+		'description'	 => '',
+		'before_widget'	 => '<aside id="%1$s" class="widget grid-cell footer-widget %2$s">',
+		'after_widget'	 => '</aside>',
+		'before_title'	 => '<h3 class="widget-title">',
+		'after_title'	 => '</h3>',
+	)
+	);
 }
 
 add_action( 'widgets_init', 'marvy_widgets_init' );

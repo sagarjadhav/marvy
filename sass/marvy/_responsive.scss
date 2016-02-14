@@ -1,0 +1,45 @@
+/* Extra small screen / phone */
+@media( max-width: $grid-breakpoint-small - 1 ) {
+    .site-header .grid {
+        flex-direction: initial;
+    }
+
+    .home-feature-pages {
+        text-align: center;
+    }
+
+    .img-wrap {
+        display: inline-block;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+
+    .home-latest-blog .post {
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Small screen / phone */
+@media (min-width: $grid-breakpoint-small) {
+
+
+
+}
+
+/* Medium screen / tablet */
+@media (min-width: $grid-breakpoint-medium) {
+
+}
+
+/* Large screen / desktop */
+@media (min-width: $grid-breakpoint-large) {
+
+
+}
+
+/* Extra large screen / wide desktop */
+@media (min-width: $grid-breakpoint-extra-large) {
+
+}

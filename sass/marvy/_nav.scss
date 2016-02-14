@@ -2,117 +2,140 @@
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	float: right;
+    float: right;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-	}
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
 
-	li {
-		float: left;
-		position: relative;
-	}
-
-}
-
-.nav-menu > li:last-child > a {
-	padding-right: 0;
-}
-
-.main-navigation a {
-	color: $color_white;
-	display: block;
-	font-size: rem-calc(14);
-	padding: rem-calc(5 22);
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
+    li {
+        float: left;
+        position: relative;
+    }
 
 }
 
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
+.primary-menu {
+    & > .menu-item-has-children {
 
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
+        &:after {
+            bottom: -30px;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 7px;
+            margin-left: -7px;
+            transition: all 0.3s;
+            opacity: 0;
+            z-index: 1;
+        }
 
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
+        &:hover:after {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    & > li > a {
+        padding-top: rem-calc(16);
+        padding-bottom: rem-calc(16);
+    }
+
+    a {
+        color: $color_white;
+        display: block;
+        font-size: rem-calc(14);
+        padding: rem-calc(5 22);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    ul {
+        background: #fff;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05),0 2px 5px 0 rgba(0,0,0,0.25);
+        border-radius: 3px;
+        position: absolute;
+        opacity: 0;
+        transition: all 0.3s;
+        margin-top: 20px;
+        top: 64px;
+        z-index: 1;
+        left: 0;
+        visibility: hidden;
+        padding: 15px 0;
+
+        ul {
+            top: 10px;
+        }
+
+        a {
+            color: #444;
+            width: 200px;
+            text-transform: inherit;
+
+            &:hover {
+                background: rgba(0,0,0,0.1);
+            }
+        }
+    }
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+    opacity: 1;
+    margin-top: -10px;
+    visibility: visible;
 }
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
-	left: 100%;
+    left: 100%;
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
+
+}
+
+// Submenu
+.menu-item-has-children > a {
+    padding-right: 32px;
+    position: relative;
+
+    &:after {
+        color: inherit;
+        content: '\e64b';
+        font-size: 7px;
+        font-family: $font__icon;
+        font-weight: normal;
+        display: inline-block;
+        margin-top: 5px;
+        position: absolute;
+        right: 15px;
+    }
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+    display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
 }

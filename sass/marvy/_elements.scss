@@ -12,15 +12,15 @@
  */
 
 html {
-	box-sizing: border-box; /* [1] */
-	font-family: $font__main; /* [2] */
+    box-sizing: border-box; /* [1] */
+    font-family: $font__main; /* [2] */
 
-	@include font-size($line-height: true); /* [3] */ /* [4] */
+    @include font-size($line-height: true); /* [3] */ /* [4] */
 
-	-ms-text-size-adjust: 100%; /* [5] */
-	-webkit-text-size-adjust: 100%; /* [5] */
+    -ms-text-size-adjust: 100%; /* [5] */
+    -webkit-text-size-adjust: 100%; /* [5] */
 
-	color: $color__text-site; /* [additional] */
+    color: $color__text-site; /* [additional] */
 }
 
 
@@ -33,7 +33,7 @@ html {
 *,
 *:before,
 *:after {
-	box-sizing: inherit; /* [1] */
+    box-sizing: inherit; /* [1] */
 }
 
 
@@ -43,18 +43,18 @@ html {
  */
 
 body {
-	background: $color__background-body; /* [1] */
-	margin: 0; /* [2] */
+    background: $color__background-body; /* [1] */
+    margin: 0; /* [2] */
 
-	&.home {
-		background: $color_white;
-	}
+    &.home {
+        background: $color_white;
+    }
 
-	// WP Editor
-	&.mce-content-body {
-		font-family: inherit;
-		margin: 15px;
-	}
+    // WP Editor
+    &.mce-content-body {
+        font-family: inherit;
+        margin: 15px;
+    }
 }
 
 
@@ -70,9 +70,9 @@ body {
  */
 
 img {
-	border: 0; /* [1] */
-	font-style: italic; /* [2] */
-	height: auto; /* [3] */
+    border: 0; /* [1] */
+    font-style: italic; /* [2] */
+    height: auto; /* [3] */
     max-width: 100%; /* [4] */
     vertical-align: middle; /* [5] */
 }
