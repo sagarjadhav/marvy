@@ -1,0 +1,37 @@
+.widget-area {
+    font-size: 14px;
+    font-weight: 300;
+
+    .widget-title {
+        color: #272727;
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 0.03rem;
+        line-height: 1.5;
+        margin: 0 0 22px;
+        text-transform: uppercase;
+
+        &:after {
+            border-bottom: 1px solid #ddd;
+            content: '';
+            display: block;
+            margin: 10px 0 0;
+            width: 40px;
+        }
+    }
+
+    a {
+        color: #888;
+    }
+}
+
+.widget {
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    li {
+        padding: 5px 0;
+    }
+}

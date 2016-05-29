@@ -269,8 +269,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  box-sizing: content-box;
-  /* 2 */
+  /*box-sizing: content-box;  2 */
 }
 
 /**
@@ -358,7 +357,7 @@ html {
  * 2. Remove default margin. [normalize.css]
  */
 body {
-  background: #f1f1f1;
+  background: #fff;
   /* [1] */
   margin: 0;
   /* [2] */
@@ -450,7 +449,7 @@ textarea {
   font-weight: 400;
   letter-spacing: 0.025rem;
   overflow: hidden;
-  padding: 0.5625rem 1.25rem;
+  padding: 0.75rem 1.625rem;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -465,6 +464,16 @@ textarea {
 .button.invert {
   background-color: #fff;
   color: #ef6e7e;
+}
+.button.read-more {
+  font-size: 12px;
+  padding: 10px 18px;
+}
+
+input.search-field {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
 }
 
 /*--------------------------------------------------------------
@@ -698,7 +707,7 @@ textarea {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 3em;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -874,10 +883,10 @@ object {
     #HEADINGS
 \*------------------------------------*/
 h1 {
-  font-size: 1.75rem;
-  line-height: 1.85714;
-  /*font-weight: 400;*/
-  letter-spacing: 0.05rem;
+  font-size: 2.125rem;
+  line-height: 1.52941;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
 }
 
 h2 {
@@ -1256,11 +1265,65 @@ figure {
     max-width: 1080px;
   }
 }
+.entry-grid {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.entry-grid .content-area {
+  max-width: 760px;
+}
+.entry-grid .hentry {
+  border-bottom: 1px dotted #999;
+  margin-bottom: 60px;
+  padding-bottom: 24px;
+}
+.entry-grid .entry-media {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.entry-grid .entry-footer {
+  font-size: 13px;
+}
+
+.widget-area {
+  font-size: 14px;
+  font-weight: 300;
+}
+.widget-area .widget-title {
+  color: #272727;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+.widget-area .widget-title:after {
+  border-bottom: 1px solid #ddd;
+  content: '';
+  display: block;
+  margin: 10px 0 0;
+  width: 40px;
+}
+.widget-area a {
+  color: #888;
+}
+
+.widget ul {
+  list-style: none;
+  margin-left: 0;
+}
+.widget li {
+  padding: 5px 0;
+}
+
 .site-header {
   position: relative;
-  z-index: 1;
+  z-index: 100;
 }
-.page-template-home .site-header:after {
+.page-template-homepage .site-header:after {
   background-color: rgba(0, 0, 0, 0.1);
   content: ' ';
   height: 100%;
@@ -1278,6 +1341,17 @@ figure {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+body:not(.page-template-homepage) .fixed-header {
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+body:not(.page-template-homepage) .fixed-header + .site-content {
+  padding-top: 90px;
+  padding-bottom: 60px;
 }
 
 .site-title {
@@ -1311,6 +1385,10 @@ figure {
   position: absolute;
   right: 0;
   width: 100%;
+}
+.home-banner .grid-cell {
+  position: relative;
+  z-index: 10;
 }
 .home-banner strong {
   font-weight: 500;
@@ -1506,8 +1584,8 @@ figure {
   opacity: 1;
 }
 .primary-menu > li > a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.1875rem;
+  padding-bottom: 1.1875rem;
 }
 .primary-menu a {
   color: #FFF;
@@ -1547,7 +1625,7 @@ figure {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   opacity: 1;
-  margin-top: -10px;
+  margin-top: -4px;
   visibility: visible;
 }
 
@@ -1670,7 +1748,7 @@ figure {
   text-align: center;
 }
 .home-theme-features h4 {
-  font-size: 1.1875rem;
+  font-size: 1.3125rem;
   font-weight: 400;
   margin-bottom: 1.25rem;
 }
@@ -1680,12 +1758,14 @@ figure {
 .home-theme-features .icon {
   color: #ef6e7e;
   display: inline-block;
-  font-size: 2rem;
-  margin-bottom: 1.25rem;
+  font-size: 2.1875rem;
+  margin-bottom: 1.625rem;
 }
 .home-theme-features p {
+  color: #787878;
+  font-size: 1rem;
   margin: 0;
-  padding: 0 0.9375rem;
+  padding: 0 1rem;
 }
 
 .overlay {
@@ -1727,7 +1807,7 @@ figure {
 .entry-footer {
   font-size: 12px;
 }
-.entry-footer .posted-on {
+.entry-footer .byline {
   display: inline-block;
   margin-right: 20px;
 }
@@ -1736,7 +1816,7 @@ figure {
   margin-right: 8px;
 }
 .entry-footer a {
-  color: #666;
+  color: #787878;
 }
 .entry-footer a:hover {
   color: #ef6e7e;
@@ -3207,7 +3287,9 @@ figure {
 
 .home-latest-blog .post {
   background: white;
+  border-radius: 4px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   -webkit-transition: all 0.4s ease 0s;
           transition: all 0.4s ease 0s;
 }
@@ -3222,7 +3304,6 @@ figure {
   font-size: 16px;
   text-transform: capitalize;
   color: #272727;
-  line-height: 27px;
 }
 .home-latest-blog .entry-header {
   border-bottom: 1px solid #e4e5e7;
@@ -3231,6 +3312,18 @@ figure {
 .home-latest-blog .entry-header,
 .home-latest-blog .entry-footer {
   padding: 15px;
+}
+
+.entry-content {
+  font-weight: 300;
+  color: #787878;
+}
+.single .entry-content {
+  font-size: 1.0625rem;
+}
+
+.entry-title {
+  line-height: 1.3;
 }
 
 .footer-widget-area {

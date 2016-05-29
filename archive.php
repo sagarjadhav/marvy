@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-<div class="grid">
+<div class="grid entry-grid">
 
 	<div id="primary" class="content-area grid-cell">
 

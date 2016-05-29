@@ -72,7 +72,7 @@
     text-align: center;
 
     h4 {
-        font-size: rem-calc(19);
+        font-size: rem-calc(21);
         font-weight: 400;
         margin-bottom: rem-calc(20);
     }
@@ -84,13 +84,15 @@
     .icon {
         color: #ef6e7e;
         display: inline-block;
-        font-size: rem-calc(32);
-        margin-bottom: rem-calc(20);
+        font-size: rem-calc(35);
+        margin-bottom: rem-calc(26);
     }
 
     p {
+        color: #787878;
+        font-size: 1rem;
         margin: 0;
-        padding: rem-calc(0 15);
+        padding: 0 1rem;
     }
 }
 
@@ -131,7 +133,7 @@
 .entry-footer {
     font-size: 12px;
 
-    .posted-on {
+    .byline {
         display: inline-block;
         margin-right: 20px;
     }
@@ -142,7 +144,7 @@
     }
 
     a {
-        color: #666;
+        color: #787878;
 
         &:hover {
             color: #ef6e7e;

@@ -46,13 +46,14 @@ if ( !function_exists( 'marvy_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		if ( function_exists( 'add_image_size' ) ) {
+			add_image_size( 'marvy-thumb', 360, 270, true );
+			add_image_size( 'marvy-large-thumb', 800, 320, true );
+		}
+
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 * This theme uses wp_nav_menu() in one location.
 		 */
-		//add_theme_support( 'post-thumbnails' );
-		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'marvy' ),
 		) );

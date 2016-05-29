@@ -23,7 +23,7 @@
 
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marvy' ); ?></a>
 
-			<header id="masthead" class="site-header" role="banner">
+			<header id="masthead" class="site-header fixed-header" role="banner">
 
 				<div class="container">
 
@@ -55,7 +55,7 @@
 			</header>
 
 			<?php
-			$class = is_page_template( 'templates/home.php' ) ? '' : ' container';
+			$class = is_page_template( 'homepage.php' ) ? '' : ' container';
 			?>
 
 			<div id="content" class="site-content<?php echo $class; ?>">

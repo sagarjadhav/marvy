@@ -114,7 +114,7 @@ if ( !function_exists( 'marvy_entry_list_footer' ) ) :
 		esc_html_x( '%s', 'post author', 'marvy' ), '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on"><i class="ti-calendar"></i> ' . $posted_on . '</span><span class="byline"><i class="ti-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK
+		echo '<span class="byline"><i class="ti-user"></i> ' . $byline . '</span><span class="posted-on"><i class="ti-calendar"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK
 	}
 
 endif;
@@ -261,7 +261,7 @@ function marvy_categorized_blog() {
 			'fields'	 => 'ids',
 			'hide_empty' => 1,
 			// We only need to know if there is more than one category.
-			'number' => 2,
+			'number'	 => 2,
 		) );
 
 		// Count the number of categories that are attached to the posts.

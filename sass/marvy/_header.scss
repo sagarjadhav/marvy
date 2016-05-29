@@ -1,8 +1,8 @@
 .site-header {
     position: relative;
-    z-index: 1;
+    z-index: 100;
 
-    .page-template-home &:after {
+    .page-template-homepage &:after {
         background-color: rgba($color_black, 0.1);
         content: ' ';
         height: 100%;
@@ -16,6 +16,18 @@
     .grid-cell {
         align-self: center;
         flex: 1 1 auto;
+    }
+}
+
+body:not(.page-template-homepage) .fixed-header {
+    height: 60px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+    & + .site-content {
+        padding-top: 90px;
+        padding-bottom: 60px;
     }
 }
 
@@ -52,6 +64,11 @@
         position: absolute;
         right: 0;
         width: 100%;
+    }
+
+    .grid-cell {
+        position: relative;
+        z-index: 10;
     }
 
     strong {

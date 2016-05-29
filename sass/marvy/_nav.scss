@@ -46,8 +46,8 @@
     }
 
     & > li > a {
-        padding-top: rem-calc(16);
-        padding-bottom: rem-calc(16);
+        padding-top: rem-calc(19);
+        padding-bottom: rem-calc(19);
     }
 
     a {
@@ -92,7 +92,7 @@
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
     opacity: 1;
-    margin-top: -10px;
+    margin-top: -4px;
     visibility: visible;
 }
 
