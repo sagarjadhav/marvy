@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-29 03:44:47+00:00\n"
+"POT-Creation-Date: 2016-06-05 07:43:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,51 +85,139 @@ msgid "Feature Pages"
 msgstr ""
 
 #: customizer/customizer-marvy.php:63
-msgid "Marvy Features"
+msgid "Theme Features"
 msgstr ""
 
-#: customizer/customizer-marvy.php:72
+#: customizer/customizer-marvy.php:73
+msgid "Responsive &amp; Flat Design"
+msgstr ""
+
+#: customizer/customizer-marvy.php:73
+msgid "WordPress Customizer"
+msgstr ""
+
+#: customizer/customizer-marvy.php:73
+msgid "Easy to Use"
+msgstr ""
+
+#: customizer/customizer-marvy.php:73
+msgid "Font Icons"
+msgstr ""
+
+#: customizer/customizer-marvy.php:73
+msgid "Translation Ready"
+msgstr ""
+
+#: customizer/customizer-marvy.php:73
+msgid "Plugin Support"
+msgstr ""
+
+#: customizer/customizer-marvy.php:88 customizer/customizer-marvy.php:319
 msgid "Latest Blog"
 msgstr ""
 
-#: customizer/customizer-marvy.php:90
-msgid "Background"
-msgstr ""
-
-#: customizer/customizer-marvy.php:103 customizer/customizer-marvy.php:143
-msgid "Content"
+#: customizer/customizer-marvy.php:97
+msgid "Home Callout"
 msgstr ""
 
 #: customizer/customizer-marvy.php:115
+msgid "Background"
+msgstr ""
+
+#: customizer/customizer-marvy.php:128 customizer/customizer-marvy.php:180
+msgid "Content"
+msgstr ""
+
+#: customizer/customizer-marvy.php:132
+msgid ""
+"Welcome to Marvy<br> WordPress Theme with <strong>Customizer</strong> "
+"options"
+msgstr ""
+
+#: customizer/customizer-marvy.php:140 customizer/customizer-marvy.php:356
 msgid "Button Text"
 msgstr ""
 
-#: customizer/customizer-marvy.php:127
+#: customizer/customizer-marvy.php:144 customizer/customizer-marvy.php:360
+msgid "Download"
+msgstr ""
+
+#: customizer/customizer-marvy.php:152 customizer/customizer-marvy.php:368
 msgid "Button Link"
 msgstr ""
 
-#: customizer/customizer-marvy.php:159 customizer/customizer-marvy.php:208
+#: customizer/customizer-marvy.php:168 customizer/customizer-marvy.php:208
+#: customizer/customizer-marvy.php:260
 msgid "Section Title"
 msgstr ""
 
-#: customizer/customizer-marvy.php:170
-msgid "Select first page"
+#: customizer/customizer-marvy.php:172
+msgid "About Marvy"
 msgstr ""
 
-#: customizer/customizer-marvy.php:181
-msgid "Select second page"
+#: customizer/customizer-marvy.php:184
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore <br>magna ipsum dolor sit amet, "
+"consectetur adipisicing elit, sed do eiusmod tempor"
 msgstr ""
 
 #: customizer/customizer-marvy.php:192
+msgid "Image"
+msgstr ""
+
+#: customizer/customizer-marvy.php:212
+msgid "Get Started with Pages"
+msgstr ""
+
+#: customizer/customizer-marvy.php:220
+msgid "Select first page"
+msgstr ""
+
+#: customizer/customizer-marvy.php:232
+msgid "Select second page"
+msgstr ""
+
+#: customizer/customizer-marvy.php:244
 msgid "Select third page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:224
+#: customizer/customizer-marvy.php:264
+msgid "Theme features"
+msgstr ""
+
+#: customizer/customizer-marvy.php:274
+msgid "Icon Class"
+msgstr ""
+
+#: customizer/customizer-marvy.php:275
+msgid "Add icon class"
+msgstr ""
+
+#: customizer/customizer-marvy.php:286 customizer/customizer-marvy.php:344
+msgid "Title"
+msgstr ""
+
+#: customizer/customizer-marvy.php:298
+msgid "Description"
+msgstr ""
+
+#: customizer/customizer-marvy.php:302
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor magna aliqua."
+msgstr ""
+
+#: customizer/customizer-marvy.php:315
 msgid "Blog Title"
 msgstr ""
 
-#: customizer/customizer-marvy.php:237
+#: customizer/customizer-marvy.php:327
 msgid "Link Color"
+msgstr ""
+
+#: customizer/customizer-marvy.php:348
+msgid "Marvy is incredibly spacious with a clean responsive design."
 msgstr ""
 
 #: customizer/customizer-sample.php:23
@@ -255,18 +343,18 @@ msgid "Proudly powered by %s"
 msgstr ""
 
 #: footer.php:29
-msgid "Theme: %1$s by %2$s."
+msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: functions.php:57 header.php:46
+#: functions.php:58 header.php:46
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:108
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:120
 msgid "Footer Sidebar"
 msgstr ""
 
@@ -384,14 +472,22 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:18 template-parts/content-single.php:27
-#: template-parts/content.php:34
+#: template-parts/content-page.php:18 template-parts/content-single.php:29
+#: template-parts/content.php:39
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:28
+#: template-parts/content.php:30
 #. translators: %s: Name of current post
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content.php:45
+msgid "Permalink to %s"
+msgstr ""
+
+#: template-parts/content.php:45
+msgid "Read More"
 msgstr ""
 
 #. Theme Name of the plugin/theme

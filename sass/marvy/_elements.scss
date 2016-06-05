@@ -84,5 +84,7 @@ a {
     & { color: $color__link; outline: 0; text-decoration: none; }
 
     // Hover
-    &:hover { color: $color__link; outline: 0; text-decoration: underline; }
+    &:hover { color: $color__link; outline: 0; text-decoration: none; }
+
+    &:focus { outline: 1px dotted; text-decoration: none; }
 }

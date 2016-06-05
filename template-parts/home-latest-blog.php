@@ -1,4 +1,4 @@
-<div class="home-section home-latest-blog">
+<div class="home-section home-latest-blog post-box-style">
 
 	<div class="container">
 

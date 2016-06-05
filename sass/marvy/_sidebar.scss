@@ -4,8 +4,8 @@
 
     .widget-title {
         color: #272727;
-        font-size: 17px;
-        font-weight: 300;
+        font-size: 14px;
+        font-weight: 400;
         letter-spacing: 0.03rem;
         line-height: 1.5;
         margin: 0 0 22px;
@@ -21,7 +21,7 @@
     }
 
     a {
-        color: #888;
+        color: #777;
     }
 }
 
@@ -32,6 +32,19 @@
     }
 
     li {
-        padding: 5px 0;
+        padding: 5px 0 5px 16px;
+        position: relative;
+
+
+        &:before {
+            content: '\e649';
+            font-family: $font__icon;
+            font-size: 7px;
+            font-weight: bold;
+            left: 0;
+            padding-right: 7px;
+            position: absolute;
+            top: 10px;
+        }
     }
 }

@@ -27,16 +27,18 @@ textarea {
 }
 
 
-.button {
+.button,
+#submit {
     background-color: #ef6e7e;
     border-radius: 2px;
+    border: 0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     color: #fff;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
-    @include letter-spacing(25);
+    @include letter-spacing(30);
     overflow: hidden;
     padding: rem-calc(12px 26px);
     position: relative;
@@ -57,7 +59,7 @@ textarea {
 
     &.read-more {
         font-size: 12px;
-        padding: 10px 18px;
+        padding: 12px 20px;
     }
 }
 

@@ -5,29 +5,33 @@
 if ( !function_exists( 'marvy_customize_css' ) ) {
 
 	function marvy_customize_css() {
-		$link_rgb = marvy_hex2rgb( get_option( 'link_color' ) );
+		$link_rgb	 = marvy_hex2rgb( get_option( 'link_color' ) );
+		$banner_bg	 = marvy_hex2rgb( get_option( 'home_banner_bg_color' ) );
 		?>
 
 		<style>
-			.page-template-homepage .site-header,
-			.home-banner { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 
+			.site-header { background-color: rgba(<?php echo $banner_bg; ?>, 0.94); }
+
+			.home-banner { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 			.home-banner .button.invert { color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 
 			a,
 			.home-theme-features .icon,
 			.footer-widget a:hover,
+			.entry-title a:hover,
 			.entry-footer a:hover,
 			.entry-footer i,
+			.button.button-cirlce,
 			.site-footer a:hover {
 				color: <?php echo get_option( 'link_color' ); ?>;
 			}
 
-			.button {
+			.button,
+			#submit {
 				background-color: <?php echo get_option( 'link_color' ); ?>;
 			}
 
-			.site-header,
 			.overlay {
 				background-color: rgba(<?php echo $link_rgb; ?>, 0.94);
 			}

@@ -137,7 +137,7 @@ function marvy_scripts() {
 	//wp_deregister_style( 'open-sans' );
 	//wp_register_style( 'open-sans', false );
 
-	wp_enqueue_style( 'marvy-google-font', '//fonts.googleapis.com/css?family=Roboto:100,500,300,400' );
+	wp_enqueue_style( 'marvy-google-font', '//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,400italic' );
 	wp_enqueue_style( 'marvy-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'marvy-js', get_template_directory_uri() . '/js/main.min.js', array( 'jquery' ), '20120206', true );

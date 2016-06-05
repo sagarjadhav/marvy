@@ -1,4 +1,4 @@
-<div class="home-feature-pages home-section">
+<div class="home-section home-feature-pages post-box-style">
 
 	<div class="container">
 
@@ -21,16 +21,16 @@
 					?>
 
 					<li class="grid-cell">
-
-						<div class="img-wrap">
+						<div class="img-wrap post">
 							<?php echo get_the_post_thumbnail( $page, 'marvy-thumb' ); ?>
-
 							<h4>
 								<a href="<?php echo get_permalink( $page ); ?>"><?php echo get_the_title( $page ); ?></a>
 							</h4>
+
+							<a class="button button-cirlce" href="<?php echo get_permalink( $page ); ?>"><i class="ti-link"></i></a>
+
 							<div class="overlay"></div>
 						</div>
-
 					</li>
 
 					<?php

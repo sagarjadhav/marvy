@@ -5,7 +5,7 @@ h1 {
     @include font-size($font__size-h1, $line-height: true);
     font-weight: 300;
     @extend %vertical-rhythm;
-    @include letter-spacing(30);
+    /*@include letter-spacing(30);*/
 }
 
 h2 {

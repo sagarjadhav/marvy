@@ -19,13 +19,13 @@
     }
 }
 
-body:not(.page-template-homepage) .fixed-header {
+.fixed-header {
     height: 60px;
     position: fixed;
     z-index: 1000;
     width: 100%;
 
-    & + .site-content {
+    body:not(.page-template-homepage) & + .site-content {
         padding-top: 90px;
         padding-bottom: 60px;
     }
@@ -76,7 +76,7 @@ body:not(.page-template-homepage) .fixed-header {
     }
 
     &.home-section {
-        padding: 9rem 0 11rem;
+        padding: 13rem 0 11rem;
     }
 }
 
