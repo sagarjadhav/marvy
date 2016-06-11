@@ -9,6 +9,6 @@ if ( !is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<div id="secondary" class="widget-area grid-cell md-grid-1-4" role="complementary">
+<div id="secondary" class="widget-area grid-cell sm-grid-1-1 lg-grid-1-4" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+</div>
