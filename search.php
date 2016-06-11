@@ -7,9 +7,9 @@
 get_header();
 ?>
 
-<div class="grid">
+<div class="grid entry-grid">
 
-	<div id="primary" class="content-area grid-cell">
+	<div id="primary" class="content-area grid-cell sm-grid-1-1 lg-grid-3-4">
 		<main id="main" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
@@ -27,7 +27,7 @@ get_header();
 					 * If you want to overload this in a child theme then include a file
 					 * called content-search.php and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', 'search' );
+					get_template_part( 'template-parts/content' );
 					?>
 
 				<?php endwhile; ?>
