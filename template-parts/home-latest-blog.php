@@ -19,7 +19,11 @@
 					<div class="grid-cell">
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-item' ); ?>>
 
-							<?php the_post_thumbnail( 'marvy-thumb' ); ?>
+							<?php if ( has_post_thumbnail() ) { ?>
+								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'marvy' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+									<?php the_post_thumbnail( 'marvy-thumb' ); ?>
+								</a><?php
+							} ?>
 
 							<header class="entry-header">
 								<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>

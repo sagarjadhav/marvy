@@ -1,18 +1,18 @@
 .entry-grid {
-    justify-content: space-between;
 
-
-    .content-area {
+    .site-main {
         max-width: 760px;
+        width: 100%;
     }
 
     .hentry {
         border-bottom: 1px dotted #999;
-        margin-bottom: 60px;
+        margin-bottom: 3rem;
         padding-bottom: 24px;
     }
 
     .entry-media {
+        display: inline-block;
         margin-bottom: 30px;
         overflow: hidden;
     }

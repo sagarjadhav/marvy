@@ -15,7 +15,7 @@ get_header();
 
 <div class="grid entry-grid">
 
-	<div id="primary" class="content-area grid-cell">
+	<div id="primary" class="content-area grid-cell sm-grid-1-1 lg-grid-3-4">
 
 		<main id="main" class="site-main" role="main">
 

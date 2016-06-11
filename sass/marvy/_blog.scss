@@ -55,3 +55,66 @@
         }
     }
 }
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    & > div {
+        max-width: 45%;
+    }
+}
+
+.comment-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation.post-navigation {
+    border-bottom: 1px dotted #999;
+    margin-bottom: 4rem;
+}
+
+/* 404 Page */
+.error-404 {
+    &.not-found {
+        padding: 3rem 0 7rem;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .search-form {
+        justify-content: center;
+    }
+
+    .page-header {
+        margin-bottom: 60px;
+    }
+}
+
+.not-found-tag {
+    font-size: 180px;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
+
+.search-form {
+    display: flex;
+
+    label {
+        min-width: 30%;
+    }
+}
+
+.page-content .search-field {
+    height: 42px;
+    border-right: 0;
+}
+
+.widget .search-form {
+    display: block;
+}
