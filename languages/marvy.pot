@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-12 14:29:53+00:00\n"
+"POT-Creation-Date: 2016-06-12 15:22:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,6 +99,10 @@ msgstr ""
 
 #: customizer/customizer-marvy.php:73
 msgid "Plugin Support"
+msgstr ""
+
+#: customizer/customizer-marvy.php:78
+msgid "- Theme Feature %s"
 msgstr ""
 
 #: customizer/customizer-marvy.php:88 customizer/customizer-marvy.php:319
@@ -323,15 +327,15 @@ msgstr ""
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: footer.php:27
+#: footer.php:31
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:27
+#: footer.php:31
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:29
+#: footer.php:33
 msgid "Theme: %1$s"
 msgstr ""
 
@@ -360,15 +364,15 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/init.php:49
+#: inc/init.php:55
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/init.php:100
+#: inc/init.php:93
 msgid "Sidebar"
 msgstr ""
 
-#: inc/init.php:112
+#: inc/init.php:105
 msgid "Footer Sidebar"
 msgstr ""
 
@@ -501,6 +505,10 @@ msgstr ""
 msgid "Marvy"
 msgstr ""
 
+#. Theme URI of the plugin/theme
+msgid "http://marvythemes.com/"
+msgstr ""
+
 #. Description of the plugin/theme
 msgid ""
 "Marvy is a free Wordpress theme. It's perfect for web agency business, "
@@ -510,6 +518,10 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Sagar Jadhav"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/sagarjadhav"
 msgstr ""
 
 #: comments.php:28

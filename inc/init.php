@@ -11,6 +11,12 @@ if ( !function_exists( 'marvy_setup' ) ) :
 	 */
 	function marvy_setup() {
 
+		global $content_width;
+
+		if ( !isset( $content_width ) ) {
+			$content_width = apply_filters( 'marvy_content_width', 720 );
+		}
+
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -75,19 +81,6 @@ if ( !function_exists( 'marvy_setup' ) ) :
 endif; // marvy_setup
 
 add_action( 'after_setup_theme', 'marvy_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function marvy_content_width() {
-	$GLOBALS[ 'content_width' ] = apply_filters( 'marvy_content_width', 720 );
-}
-
-add_action( 'after_setup_theme', 'marvy_content_width', 0 );
 
 /**
  * Register widget area.
