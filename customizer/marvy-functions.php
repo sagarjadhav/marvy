@@ -13,6 +13,7 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 
 			.site-header { background-color: rgba(<?php echo $banner_bg; ?>, 0.94); }
 
+			.nav-site-title,
 			.home-banner { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 			.home-banner .button.invert { color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
 

@@ -19,25 +19,46 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .entry-title {
+        font-size: 25px;
+    }
+
+    h1.entry-title {
+        font-size: 28px;
+    }
+
+    .fixed-header {
+        position: absolute;
+    }
 }
+
 
 /* Small screen / phone */
 @media (min-width: $grid-breakpoint-small) {
-
-
-
+    .home-banner.home-section {
+        padding: 7rem 0 6rem;
+    }
 }
 
 /* Medium screen / tablet */
 @media (min-width: $grid-breakpoint-medium) {
-
+    .home-banner.home-section {
+        padding: 7rem 0 6rem;
+    }
 }
 
 /* Large screen / desktop */
 @media (min-width: $grid-breakpoint-large) {
+    .home-banner.home-section {
+        padding: 13rem 0 11rem;
+    }
 
-
+    .home-banner {
+        font-size: 36px;
+    }
 }
+
 
 /* Extra large screen / wide desktop */
 @media (min-width: $grid-breakpoint-extra-large) {

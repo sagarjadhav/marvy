@@ -1,15 +1,14 @@
 @charset "UTF-8";
 /*!
 Theme Name: Marvy
-Theme URI: http://frontendmonster.com/
-Description: WordPress theme framework with Custom Menu, Header and Background along with Logo, Favicon, Featured Image, Google Custom Search Integration and more options. Now includes a Foundation 5 framework, Grunt Task Runner, Bower package manager, SAAS based CSS preprocessor and translation support. This theme comes with free technical support by team of 30+ full-time developers.
+Description: Marvy is a free Wordpress theme. It's perfect for web agency business, corporate business, personal and parallax business portfolio, photography sites and freelancer. Is is responsive, clean, modern, flat and minimal.
 Version: 1.0
 Author: Sagar Jadhav
-Author URI: http://frontendmonster.com/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: marvy
-Tags: black
+Domain Path: /languages/
+Tags: theme-options, custom-menu, two-columns, right-sidebar, footer-widgets
 */
 /* GRID */
 /**
@@ -415,6 +414,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: #fdfdfd;
   color: #666;
   border: 1px solid #e5e5e5;
@@ -1420,16 +1423,27 @@ figure {
 }
 
 .fixed-header {
-  height: 60px;
+  height: 52px;
   position: fixed;
   z-index: 1000;
   width: 100%;
 }
-body:not(.page-template-homepage) .fixed-header + .site-content {
-  padding-top: 90px;
-  padding-bottom: 60px;
+
+body:not(.page-template-homepage) .site-content {
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
+@media screen and (min-width: 992px) {
+  .fixed-header {
+    height: 60px;
+  }
+
+  body:not(.page-template-homepage) .site-content {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+}
 .site-title {
   font-size: 1.375rem;
   font-weight: 400;
@@ -1445,7 +1459,7 @@ body:not(.page-template-homepage) .fixed-header + .site-content {
 
 .home-banner {
   color: #FFF;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 100;
   position: relative;
   text-align: center;
@@ -1470,7 +1484,7 @@ body:not(.page-template-homepage) .fixed-header + .site-content {
   font-weight: 500;
 }
 .home-banner.home-section {
-  padding: 13rem 0 11rem;
+  padding: 5rem 0;
 }
 
 .banner-content {
@@ -1739,12 +1753,84 @@ body:not(.page-template-homepage) .fixed-header + .site-content {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
+  background: transparent;
+  border: 0 none;
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu-wrapper {
+  background: #fff;
+  height: 100%;
+  left: -240px;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  width: 240px;
+  -webkit-transition: left 0.3s;
+          transition: left 0.3s;
+  z-index: 999991;
+}
+.animate-nav .mobile-menu-wrapper {
+  left: 0;
+}
+
+.mobile-menu {
+  list-style: none;
+  margin: 0;
+}
+.mobile-menu .sub-menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+}
+.mobile-menu .sub-menu a {
+  font-size: 13px;
+  padding-left: 25px;
+}
+.mobile-menu li:hover .sub-menu {
+  display: block;
+}
+.mobile-menu a {
+  border-bottom: 1px solid #eee;
+  color: inherit;
+  display: block;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.nav-overlay {
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999990;
+}
+.animate-nav .nav-overlay {
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.nav-site-title {
+  background: #ef6e7e;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  margin: 0;
+  padding: 11px 20px 10px;
+}
+.nav-site-title a {
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
   .menu-toggle {
     display: none;
   }
@@ -3842,10 +3928,41 @@ label[for='subscribe-reloaded'] {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .entry-title {
+    font-size: 25px;
+  }
+
+  h1.entry-title {
+    font-size: 28px;
+  }
+
+  .fixed-header {
+    position: absolute;
+  }
 }
 /* Small screen / phone */
+@media (min-width: 544px) {
+  .home-banner.home-section {
+    padding: 7rem 0 6rem;
+  }
+}
 /* Medium screen / tablet */
+@media (min-width: 768px) {
+  .home-banner.home-section {
+    padding: 7rem 0 6rem;
+  }
+}
 /* Large screen / desktop */
+@media (min-width: 992px) {
+  .home-banner.home-section {
+    padding: 13rem 0 11rem;
+  }
+
+  .home-banner {
+    font-size: 36px;
+  }
+}
 /* Extra large screen / wide desktop */
 
 /*# sourceMappingURL=style.css.map */

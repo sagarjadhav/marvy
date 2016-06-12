@@ -26,11 +26,13 @@
 	<div class="container site-info">
 		<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'marvy' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'marvy' ), 'WordPress' ); ?></a>
 		<span class="sep"> | </span>
-		<?php printf( esc_html__( 'Theme: %1$s by %2$s', 'marvy' ), 'marvy', '<a href="#" rel="designer">Sagar</a>' ); ?>
+		<?php printf( esc_html__( 'Theme: %1$s', 'marvy' ), 'Marvy' ); ?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 
 </div><!-- #page -->
+
+<div class="nav-overlay"></div>
 
 <?php wp_footer(); ?>
 

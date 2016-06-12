@@ -112,13 +112,13 @@ function marvy_comment( $comment, $args, $depth ) {
 		<div class="comment-content-wrap">
 
 			<div class="comment-meta commentmetadata">
-				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ); ?>
+				<?php printf( __( '<cite class="fn">%s</cite>', 'marvy' ), get_comment_author_link() ); ?>
 
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 					<?php
 					/* translators: 1: date, 2: time */
-					printf( __( '%1$s at %2$s' ), get_comment_date(), get_comment_time() );
-					?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+					printf( __( '%1$s at %2$s', 'marvy' ), get_comment_date(), get_comment_time() );
+					?></a><?php edit_comment_link( __( '(Edit)', 'marvy' ), '  ', '' );
 					?>
 			</div>
 

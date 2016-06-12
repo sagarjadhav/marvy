@@ -9,14 +9,13 @@
             this.windowOnLoad();
         },
         MobileMenu: function () {
-            $( '.rtp-menu-toggle' ).click( function ( e ) {
+            $( '.menu-toggle' ).click( function ( e ) {
                 e.preventDefault();
-                $( 'body' ).toggleClass( 'rtp-open-menu' );
+                $( 'body' ).toggleClass( 'animate-nav' );
             } );
 
-            $( '.marvy-search' ).click( function ( e ) {
-                e.preventDefault();
-                $( 'body' ).toggleClass( 'search-open' );
+            $( '.nav-overlay' ).on( 'click', function ( ) {
+                $( 'body' ).removeClass( 'animate-nav' );
             } );
         },
         sliderParallax: function () {

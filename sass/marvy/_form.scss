@@ -4,6 +4,11 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     background: #fdfdfd;
     color: $color__text-input;
     border: 1px solid $color__border-input;

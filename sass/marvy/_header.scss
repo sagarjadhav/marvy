@@ -20,12 +20,23 @@
 }
 
 .fixed-header {
-    height: 60px;
+    height: 52px;
     position: fixed;
     z-index: 1000;
     width: 100%;
+}
 
-    body:not(.page-template-homepage) & + .site-content {
+body:not(.page-template-homepage) .site-content {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+@media screen and (min-width: $grid-large-breakpoint) {
+    .fixed-header {
+        height: 60px;
+    }
+
+    body:not(.page-template-homepage) .site-content {
         padding-top: 90px;
         padding-bottom: 60px;
     }
@@ -48,7 +59,7 @@
 
 .home-banner {
     color: $color_white;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 100;
     position: relative;
     text-align: center;
@@ -76,7 +87,7 @@
     }
 
     &.home-section {
-        padding: 13rem 0 11rem;
+        padding: 5rem 0;
     }
 }
 

@@ -43,7 +43,7 @@
 
 						<div class="grid-cell">
 							<nav id="site-navigation" class="main-navigation" role="navigation">
-								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'marvy' ); ?></button>
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="ti-menu"></i></button>
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container' => false, 'menu_class' => 'primary-menu', ) ); ?>
 							</nav>
 						</div>
@@ -53,6 +53,11 @@
 				</div>
 
 			</header>
+
+			<div class="mobile-menu-wrapper">
+				<p class="nav-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'mobile-menu', 'container' => false, 'menu_class' => 'mobile-menu', 'depth' => 2, ) ); ?>
+			</div>
 
 			<?php
 			$class = is_page_template( 'homepage.php' ) ? '' : ' container';

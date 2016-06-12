@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-12 07:21:59+00:00\n"
+"POT-Creation-Date: 2016-06-12 14:22:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,19 +32,19 @@ msgstr ""
 msgid "The page your are looking for is not avaiable. Please search another"
 msgstr ""
 
-#: comments.php:38 comments.php:59
+#: comments.php:35 comments.php:58
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41 comments.php:62
+#: comments.php:38 comments.php:61
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:42 comments.php:63
+#: comments.php:39 comments.php:62
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:75
+#: comments.php:74
 msgid "Comments are closed."
 msgstr ""
 
@@ -332,19 +332,7 @@ msgid "Proudly powered by %s"
 msgstr ""
 
 #: footer.php:29
-msgid "Theme: %1$s by %2$s"
-msgstr ""
-
-#: functions.php:58 header.php:46
-msgid "Primary Menu"
-msgstr ""
-
-#: functions.php:108
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:120
-msgid "Footer Sidebar"
+msgid "Theme: %1$s"
 msgstr ""
 
 #: header.php:24
@@ -353,6 +341,35 @@ msgstr ""
 
 #: inc/extras.php:54
 msgid "Page %s"
+msgstr ""
+
+#: inc/extras.php:115
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: inc/extras.php:120
+#. translators: 1: date, 2: time
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/extras.php:121
+msgid "(Edit)"
+msgstr ""
+
+#: inc/extras.php:126
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/init.php:49
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/init.php:100
+msgid "Sidebar"
+msgstr ""
+
+#: inc/init.php:112
+msgid "Footer Sidebar"
 msgstr ""
 
 #: inc/template-tags.php:23
@@ -484,25 +501,18 @@ msgstr ""
 msgid "Marvy"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "http://frontendmonster.com/"
-msgstr ""
-
 #. Description of the plugin/theme
 msgid ""
-"WordPress theme framework with Custom Menu, Header and Background along "
-"with Logo, Favicon, Featured Image, Google Custom Search Integration and "
-"more options. Now includes a Foundation 5 framework, Grunt Task Runner, "
-"Bower package manager, SAAS based CSS preprocessor and translation support. "
-"This theme comes with free technical support by team of 30+ full-time "
-"developers."
+"Marvy is a free Wordpress theme. It's perfect for web agency business, "
+"corporate business, personal and parallax business portfolio, photography "
+"sites and freelancer. Is is responsive, clean, modern, flat and minimal."
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "Sagar Jadhav"
 msgstr ""
 
-#: comments.php:29
+#: comments.php:28
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
