@@ -1,28 +1,28 @@
 .widget-area {
-    font-size: 14px;
-    font-weight: 300;
-
-    .widget-title {
-        color: #272727;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.03rem;
-        line-height: 1.5;
-        margin: 0 0 22px;
-        text-transform: uppercase;
-
-        &:after {
-            border-bottom: 1px solid #ddd;
-            content: '';
-            display: block;
-            margin: 10px 0 0;
-            width: 40px;
-        }
-    }
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     a {
         color: #777;
+        display: inline-block;
+        transition: all 0.1s;
+
+        &:hover {
+            color: #555;
+            padding-left: 8px;
+        }
     }
+}
+
+.widget-title {
+    line-height: 1.5;
+    margin: 0 0 22px;
+    text-transform: uppercase;
+    border: none;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: 2px;
 }
 
 .widget {
@@ -32,19 +32,31 @@
     }
 
     li {
-        padding: 5px 0 5px 16px;
         position: relative;
+        color: #91979d;
+        border-bottom: 1px dotted #e2e2e2;
+        padding: 8px 16px 8px 0;
 
+        &:hover {
+            background: #fafafa;
+        }
 
-        &:before {
+        &:after {
             content: '\e649';
             font-family: $font__icon;
             font-size: 7px;
             font-weight: bold;
-            left: 0;
-            padding-right: 7px;
+            right: 8px;
             position: absolute;
-            top: 10px;
+            top: 12px;
+        }
+
+        li:last-child {
+            border-bottom: 0;
         }
     }
+}
+
+.widget_search {
+    margin-top: 26px;
 }

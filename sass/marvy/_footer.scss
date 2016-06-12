@@ -1,33 +1,51 @@
 .footer-widget-area {
     background: #252525;
-    color: white;
+    color: #898989;
     font-size: 14px;
     margin-top: -1px;
-    padding: 3rem 0 0rem;
+    padding: 3rem 0 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     h3 {
-        font-size: 18px;
-        font-weight: 400;
-        margin: 0 0 16px;
+        color: #ddd;
     }
 
     a {
-        color: #999;
+        color: #aaa;
+        display: inline-block;
+        transition: all 0.1s;
+
+        &:hover {
+            color: #555;
+            padding-left: 8px;
+        }
     }
 
     ul {
-        margin-left: 1rem;
+        margin-left: 0;
+    }
+
+    li {
+        border-color: #444;
+
+        &:hover {
+            background: rgba(0,0,0,0.2);
+        }
     }
 }
 
 .site-footer {
     background: #000;
-    color: white;
+    color: #898989;
     font-size: 14px;
     padding: 1rem 0;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     a {
-        color: #999;
+        color: #aaa;
     }
 }

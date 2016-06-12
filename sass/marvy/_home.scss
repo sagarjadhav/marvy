@@ -21,12 +21,16 @@
 }
 
 .home-about-content {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     text-align: center;
 
     h2 {
         margin-bottom: 2rem;
+    }
+
+    p {
+        color: #787878;
     }
 }
 
@@ -71,7 +75,7 @@
     text-align: center;
 
     h4 {
-        font-size: rem-calc(21);
+        font-size: rem-calc(20);
         font-weight: 400;
         margin-bottom: rem-calc(20);
     }
@@ -89,7 +93,7 @@
 
     p {
         color: #787878;
-        font-size: 1rem;
+        font-size: rem-calc(15);
         margin: 0;
         padding: 0 1rem;
     }
@@ -165,17 +169,6 @@
     }
 
     a {
-        color: #555;
-
-        &:hover {
-            color: #ef6e7e;
-            text-decoration: none;
-        }
-    }
-}
-
-.post-box-style {
-    .entry-footer a {
         color: #777;
 
         &:hover {

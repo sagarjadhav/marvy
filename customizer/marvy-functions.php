@@ -21,6 +21,7 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 			.footer-widget a:hover,
 			.entry-title a:hover,
 			.entry-footer a:hover,
+			.comment-meta a:hover,
 			.entry-footer i,
 			.button.button-cirlce,
 			.site-footer a:hover {
