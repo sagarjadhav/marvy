@@ -10,17 +10,21 @@
 
 </div><!-- #content -->
 
-<div class="footer-widget-area">
+<?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
 
-	<div class="container">
+	<div class="footer-widget-area">
 
-		<div class="grid">
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		<div class="container">
+
+			<div class="grid">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+
 		</div>
 
 	</div>
 
-</div>
+<?php } ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container site-info">

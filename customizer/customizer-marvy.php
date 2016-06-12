@@ -75,7 +75,7 @@ $features		 = sizeof( $default_titles );
 
 for ( $f = 1; $f <= $features; $f++ ) {
 	$options[] = array(
-		'title'			 => __( '- Theme Feature ' . $f, 'marvy' ), // Section name
+		'title'			 => printf( __( '- Theme Feature %s', 'marvy' ), $f ),
 		//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 		'panel'			 => 'home_panel', // panel
 		'id'			 => 'home_theme_feature_' . $f, // unique ID
