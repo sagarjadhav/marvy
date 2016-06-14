@@ -75,7 +75,7 @@ $features		 = sizeof( $default_titles );
 
 for ( $f = 1; $f <= $features; $f++ ) {
 	$options[] = array(
-		'title'			 => printf( __( '- Theme Feature %s', 'marvy' ), $f ),
+		'title'			 => sprintf( __( '- Theme Feature %s', 'marvy' ), $f ),
 		//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 		'panel'			 => 'home_panel', // panel
 		'id'			 => 'home_theme_feature_' . $f, // unique ID
@@ -181,7 +181,7 @@ $options[] = array(
 	'description'		 => '', // Control description
 	'section'			 => 'home_about_content', // section
 	'id'				 => 'home_about_text', // unique ID
-	'default'			 => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore <br>magna ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor', 'marvy' ),
+	'default'			 => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor', 'marvy' ),
 	'option'			 => 'textarea',
 	'sanitize_callback'	 => 'esc_textarea',
 	'type'				 => 'control'
