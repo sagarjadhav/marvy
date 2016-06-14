@@ -67,6 +67,7 @@
         }
     }
 
+    .children,
     .sub-menu {
         background: #fff;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05),0 2px 5px 0 rgba(0,0,0,0.25);
@@ -95,6 +96,11 @@
             }
         }
     }
+}
+
+div#primary-menu > ul > li > a {
+    padding-top: rem-calc(19);
+    padding-bottom: rem-calc(18);
 }
 
 .main-navigation ul li:hover > ul,
