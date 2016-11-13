@@ -28,7 +28,7 @@
 						<i class="icon <?php echo get_option( 'home_theme_feature_icon_1' ); ?>"></i>
 						<h4><?php echo get_the_title( $page ); ?></h4>
 						<div class="page-excerpt">
-							<?php marvy_get_excerpt_by_id( $page ); ?>
+							<?php marvy_page_content_by_id( $page ); ?>
 						</div>
 					</li>
 

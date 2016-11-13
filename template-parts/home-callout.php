@@ -5,7 +5,8 @@
 		<div class="home-callout">
 			<?php
 			$page_id = get_option( 'home_callout_content' );
-			marvy_the_content_by_id( $page_id );
+			// get page content
+			marvy_page_content_by_id( $page_id, 'the_content' );
 			?>
 		</div>
 

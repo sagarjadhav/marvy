@@ -6,7 +6,8 @@
 
 		<?php
 		$page_id = get_option( 'home_about_content' );
-		marvy_get_excerpt_by_id( $page_id );
+		// get page excerpt
+		marvy_page_content_by_id( $page_id );
 
 		if ( has_post_thumbnail( $page_id ) ) {
 			echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );

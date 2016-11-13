@@ -9,7 +9,8 @@
 				<div class="banner-content">
 					<?php
 					$page_id = get_option( 'home_banner_content' );
-					marvy_get_excerpt_by_id( $page_id );
+					// get page excerpt
+					marvy_page_content_by_id( $page_id );
 					?>
 				</div>
 
