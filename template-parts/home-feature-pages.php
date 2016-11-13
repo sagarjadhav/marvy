@@ -31,7 +31,7 @@
 								echo '<div class="marvy-placeholder"></div>';
 							}
 							?>
-							<h4><a href="<?php echo get_permalink( $page ); ?>"><?php echo get_the_title( $page_id ); ?></a></h4>
+							<h4><a href="<?php echo get_permalink( $page_id ); ?>"><?php echo get_the_title( $page_id ); ?></a></h4>
 							<a class="button button-cirlce" href="<?php echo get_permalink( $page_id ); ?>"><i class="ti-link"></i></a>
 							<div class="overlay"></div>
 						</div>
