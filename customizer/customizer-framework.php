@@ -290,16 +290,6 @@ function wpc_customizer_register( $wp_customize ) {
 					) ) );
 					break;
 
-				// Textarea Field
-				case 'textarea':
-					$wp_customize->add_control( new WPC_Customize_Textarea_Control( $wp_customize, esc_attr( $option[ 'id' ] ), array(
-						'priority'		 => $priority,
-						'section'		 => $section,
-						'label'			 => $title,
-						'description'	 => $description,
-					) ) );
-					break;
-
 				// Menus Field
 				case 'menus':
 					$wp_customize->add_control( new WPC_Customize_Menus_Control( $wp_customize, esc_attr( $option[ 'id' ] ), array(

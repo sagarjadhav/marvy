@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Jetpack Compatibility File
  * See: https://jetpack.me/
@@ -12,11 +13,13 @@
  */
 function marvy_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'marvy_infinite_scroll_render',
-		'footer'    => 'page',
+		'container'	 => 'main',
+		'render'	 => 'marvy_infinite_scroll_render',
+		'footer'	 => 'page',
 	) );
-} // end function marvy_jetpack_setup
+}
+
+// end function marvy_jetpack_setup
 add_action( 'after_setup_theme', 'marvy_jetpack_setup' );
 
 function marvy_infinite_scroll_render() {
@@ -24,4 +27,6 @@ function marvy_infinite_scroll_render() {
 		the_post();
 		get_template_part( 'template-parts/content', get_post_format() );
 	}
-} // end function marvy_infinite_scroll_render
+}
+
+// end function marvy_infinite_scroll_render

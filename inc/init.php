@@ -71,11 +71,18 @@ if ( !function_exists( 'marvy_setup' ) ) :
 			'aside', 'image', 'video', 'quote', 'link',
 		) );
 
-		// Set up the WordPress core custom background feature.
+		/**
+		 * Set up the WordPress core custom background feature.
+		 */
 		add_theme_support( 'custom-background', apply_filters( 'marvy_custom_background_args', array(
 			'default-color'	 => 'ffffff',
 			'default-image'	 => '',
 		) ) );
+
+		/**
+		 * Enables the Excerpt meta box in Page edit screen.
+		 */
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 endif; // marvy_setup
