@@ -19,7 +19,7 @@ Tags: theme-options, custom-menu, two-columns, right-sidebar, footer-widgets
  * over and over in your markup.
  */
 .clearfix:after {
-  content: "";
+  content: ' ';
   display: table;
   clear: both;
 }
@@ -1494,148 +1494,6 @@ body:not(.page-template-homepage) .site-content {
   /*text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);*/
 }
 
-.ip-header {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  min-height: 480px;
-  width: 100%;
-  height: 100%;
-  background: #f1f1f1;
-}
-
-.ip-loader {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  cursor: default;
-  pointer-events: none;
-}
-
-.ip-loader {
-  top: 40%;
-}
-
-.ip-header .ip-inner {
-  display: block;
-  margin: 0 auto;
-}
-
-.ip-header .ip-loader svg path {
-  fill: none;
-  stroke-width: 6;
-}
-
-.ip-header .ip-loader svg path.ip-loader-circlebg {
-  stroke: #ddd;
-}
-
-.ip-header .ip-loader svg path.ip-loader-circle {
-  -webkit-transition: stroke-dashoffset 0.2s;
-          transition: stroke-dashoffset 0.2s;
-  stroke: #ef6e7e;
-}
-
-/* Animations */
-/* Initial animation of header elements */
-.loading .ip-loader {
-  opacity: 1;
-  -webkit-animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-          animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-}
-
-.loading .ip-loader {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-@-webkit-keyframes animInitialHeader {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 800px, 0);
-            transform: translate3d(0, 800px, 0);
-  }
-}
-
-@keyframes animInitialHeader {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 800px, 0);
-            transform: translate3d(0, 800px, 0);
-  }
-}
-/* Header elements when loading finishes */
-.loaded .ip-loader {
-  opacity: 1;
-}
-
-.loaded .ip-loader {
-  -webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-          animation: animLoadedLoader 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-}
-
-@-webkit-keyframes animLoadedLoader {
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0) scale3d(0.3, 0.3, 1);
-            transform: translate3d(0, -100%, 0) scale3d(0.3, 0.3, 1);
-  }
-}
-
-@keyframes animLoadedLoader {
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0) scale3d(0.3, 0.3, 1);
-            transform: translate3d(0, -100%, 0) scale3d(0.3, 0.3, 1);
-  }
-}
-/* Header animation when loading finishes */
-.loaded .ip-header {
-  -webkit-animation: animLoadedHeader 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-          animation: animLoadedHeader 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-}
-
-@-webkit-keyframes animLoadedHeader {
-  to {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-}
-
-@keyframes animLoadedHeader {
-  to {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-}
-/* Content animations */
-.loaded .site-header,
-.loaded .site-content {
-  -webkit-animation: animLoadedContent 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-          animation: animLoadedContent 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-}
-
-@-webkit-keyframes animLoadedContent {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 200px, 0);
-            transform: translate3d(0, 200px, 0);
-  }
-}
-
-@keyframes animLoadedContent {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 200px, 0);
-            transform: translate3d(0, 200px, 0);
-  }
-}
-/* Change layout class for header */
-.layout-switch .ip-header {
-  position: absolute;
-}
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1883,6 +1741,11 @@ div#primary-menu > ul > li > a {
   color: #787878;
 }
 
+.home-callout {
+  color: #787878;
+  font-size: 18px;
+  font-weight: 300;
+}
 .home-callout p:last-child {
   margin: 0;
 }
@@ -3512,6 +3375,12 @@ body:not(.error404) .entry-grid .site-main {
 }
 .entry-grid .entry-footer {
   font-size: 13px;
+}
+
+.entry-grid .hentry:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .post-box-style .post {

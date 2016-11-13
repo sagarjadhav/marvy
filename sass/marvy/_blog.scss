@@ -23,6 +23,12 @@
     }
 }
 
+.entry-grid .hentry:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .post-box-style {
 
     .post {
