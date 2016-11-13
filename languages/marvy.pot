@@ -1,10 +1,10 @@
 # Copyright (C) 2016 Sagar Jadhav
-# This file is distributed under the GNU General Public License v2 or later.
+# This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Marvy 1.0\n"
+"Project-Id-Version: Marvy 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-14 06:14:23+00:00\n"
+"POT-Creation-Date: 2016-11-13 06:50:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -211,111 +211,6 @@ msgstr ""
 
 #: customizer/customizer-marvy.php:348
 msgid "Marvy is incredibly spacious with a clean responsive design."
-msgstr ""
-
-#: customizer/customizer-sample.php:23
-msgid "Example Panel"
-msgstr ""
-
-#: customizer/customizer-sample.php:24 customizer/customizer-sample.php:33
-msgid "Panel description."
-msgstr ""
-
-#: customizer/customizer-sample.php:32
-msgid "Example Panel 2"
-msgstr ""
-
-#: customizer/customizer-sample.php:46
-msgid "Standard Form Fields"
-msgstr ""
-
-#: customizer/customizer-sample.php:47 customizer/customizer-sample.php:57
-#: customizer/customizer-sample.php:67
-msgid "Section description"
-msgstr ""
-
-#: customizer/customizer-sample.php:56
-msgid "WordPress 4.0+ Fields"
-msgstr ""
-
-#: customizer/customizer-sample.php:66
-msgid "WordPress Data"
-msgstr ""
-
-#: customizer/customizer-sample.php:81
-msgid "Text Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:93
-msgid "Textarea Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:105
-msgid "Color Picker Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:117
-msgid "Radio Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:134
-msgid "Checkbox Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:147
-msgid "Select Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:164
-msgid "Image Upload Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:176
-msgid "File Upload Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:188
-msgid "URL Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:200
-msgid "Email Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:212
-msgid "Password Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:223
-msgid "Range Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:240
-msgid "Pages Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:252
-msgid "Categories Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:264
-msgid "Tags Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:276
-msgid "Post Types Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:288
-msgid "Posts Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:300
-msgid "Users Field"
-msgstr ""
-
-#: customizer/customizer-sample.php:312
-msgid "Menus Field"
 msgstr ""
 
 #: customizer/inc/class-wp-customize-control.php:49

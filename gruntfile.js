@@ -56,8 +56,7 @@ module.exports = function ( grunt ) {
             },
             frontend: {
                 src: [
-                    'js/modernizr.min.js',
-                    //'js/vendors/loader.js',
+                    'js/vendors/modernizr.js',
                     'js/main.js'
                 ],
                 dest: 'js/main.min.js'
