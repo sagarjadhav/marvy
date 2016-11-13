@@ -17,7 +17,6 @@
 
 	<footer class="entry-footer">
 		<?php marvy_entry_list_footer(); ?>
-		<?php //marvy_entry_footer(); ?>
 	</footer>
 
 	<div class="entry-content">

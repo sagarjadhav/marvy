@@ -37,14 +37,10 @@
 								<?php marvy_entry_list_footer(); ?>
 							</footer><!-- .entry-footer -->
 						</article><!-- #post-## -->
-
 					</div>
-
 					<?php
 				endwhile;
-
 			endif;
-
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
