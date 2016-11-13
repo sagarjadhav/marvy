@@ -84,6 +84,42 @@ function marvy_excerpt_more( $more ) {
 
 add_filter( 'excerpt_more', 'marvy_excerpt_more' );
 
+/*
+ * Get content by page ID
+ */
+
+function marvy_the_content_by_id( $id ) {
+	if ( isset( $id ) && 0 != $id ) {
+		global $post;
+		$post = get_post( $id );
+		setup_postdata( $post );
+		the_content();
+		wp_reset_postdata( $post );
+	}
+}
+
+/*
+ * Get excerpt by page ID
+ */
+
+function marvy_get_excerpt_by_id( $id ) {
+	if ( isset( $id ) && 0 != $id ) {
+		global $post;
+		$post = get_post( $id );
+		setup_postdata( $post );
+		the_excerpt();
+		wp_reset_postdata( $post );
+	}
+}
+
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function marvy_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+
+add_action( 'init', 'marvy_add_excerpt_support_for_pages' );
 
 /*
  * Comments

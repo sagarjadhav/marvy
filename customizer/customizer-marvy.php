@@ -14,7 +14,6 @@ $capability = 'edit_theme_options';
  */
 $options = array(); // If you delete this line, the sky will fall down! So you better don't.
 
-
 /* ---------------------------------------------------------------------------------------------------
   Panels (optional - WP 4.0+ only)
   --------------------------------------------------------------------------------------------------- */
@@ -68,22 +67,6 @@ $options[] = array(
 	'type'			 => 'section'
 );
 
-
-$default_icons	 = array( 'ti-mobile', 'ti-settings', 'ti-face-smile', 'ti-folder', 'ti-check-box', 'ti-plug' );
-$default_titles	 = array( __( 'Responsive &amp; Flat Design', 'marvy' ), __( 'WordPress Customizer', 'marvy' ), __( 'Easy to Use', 'marvy' ), __( 'Font Icons', 'marvy' ), __( 'Translation Ready', 'marvy' ), __( 'Plugin Support', 'marvy' ) );
-$features		 = sizeof( $default_titles );
-
-for ( $f = 1; $f <= $features; $f++ ) {
-	$options[] = array(
-		'title'			 => sprintf( __( '- Theme Feature %s', 'marvy' ), $f ),
-		//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
-		'panel'			 => 'home_panel', // panel
-		'id'			 => 'home_theme_feature_' . $f, // unique ID
-		'theme_supports' => '',
-		'type'			 => 'section'
-	);
-}
-
 $options[] = array(
 	'title'			 => __( 'Latest Blog', 'marvy' ), // Section name
 	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
@@ -123,15 +106,15 @@ $options[] = array(
  //'transport' => 'postMessage'
 );
 
-// Home page banner content
+// Banner Content Page
 $options[] = array(
-	'title'				 => __( 'Content', 'marvy' ), // Control label
+	'title'				 => __( 'Select banner content page', 'marvy' ), // Control label
 	'description'		 => '', // Control description
 	'section'			 => 'home_banner_section', // section
-	'id'				 => 'home_banner_text', // unique ID
-	'default'			 => __( 'Welcome to Marvy<br> WordPress Theme with <strong>Customizer</strong> options', 'marvy' ),
-	'option'			 => 'textarea',
-	'sanitize_callback'	 => 'esc_textarea',
+	'id'				 => 'home_banner_content', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
 	'type'				 => 'control'
 );
 
@@ -144,18 +127,6 @@ $options[] = array(
 	'default'			 => __( 'Download', 'marvy' ),
 	'option'			 => 'text',
 	'sanitize_callback'	 => 'sanitize_text_field',
-	'type'				 => 'control'
-);
-
-// Banner button link
-$options[] = array(
-	'title'				 => __( 'Button Link', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_banner_section', // section
-	'id'				 => 'home_banner_button_url', // unique ID
-	'default'			 => '#',
-	'option'			 => 'url',
-	'sanitize_callback'	 => 'esc_url',
 	'type'				 => 'control'
 );
 
@@ -175,27 +146,15 @@ $options[] = array(
 	'type'				 => 'control'
 );
 
-// Home feature content
+// Banner Content Page
 $options[] = array(
-	'title'				 => __( 'Content', 'marvy' ), // Control label
+	'title'				 => __( 'Select about content page', 'marvy' ), // Control label
 	'description'		 => '', // Control description
 	'section'			 => 'home_about_content', // section
-	'id'				 => 'home_about_text', // unique ID
-	'default'			 => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor', 'marvy' ),
-	'option'			 => 'textarea',
-	'sanitize_callback'	 => 'esc_textarea',
-	'type'				 => 'control'
-);
-
-// Home feature content
-$options[] = array(
-	'title'				 => __( 'Image', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_about_content', // section
-	'id'				 => 'home_about_image', // unique ID
-	'default'			 => '',
-	'option'			 => 'image',
-	'sanitize_callback'	 => 'esc_url',
+	'id'				 => 'home_about_content', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
 	'type'				 => 'control'
 );
 
@@ -267,44 +226,74 @@ $options[] = array(
 	'type'				 => 'control'
 );
 
-for ( $x = 1; $x <= $features; $x++ ) {
+// Feature page 1
+$options[] = array(
+	'title'				 => __( 'Select first feature page', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_1', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
+	'type'				 => 'control'
+);
 
-	// Section Icon
-	$options[] = array(
-		'title'				 => __( 'Icon Class', 'marvy' ), // Control label
-		'description'		 => __( 'Add icon class', 'marvy' ),
-		'section'			 => 'home_theme_feature_' . $x, // section
-		'id'				 => 'home_theme_feature_icon_' . $x, // unique ID
-		'default'			 => $default_icons[ $x - 1 ],
-		'option'			 => 'text',
-		'sanitize_callback'	 => 'sanitize_text_field',
-		'type'				 => 'control'
-	);
+$options[] = array(
+	'title'				 => __( 'Add icon class', 'marvy' ), // Control label
+	'description'		 => __( '', 'marvy' ),
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_icon_1', // unique ID
+	'default'			 => 'ti-mobile',
+	'option'			 => 'text',
+	'sanitize_callback'	 => 'sanitize_text_field',
+	'type'				 => 'control'
+);
 
-	// Section Title
-	$options[] = array(
-		'title'				 => __( 'Title', 'marvy' ), // Control label
-		'description'		 => '',
-		'section'			 => 'home_theme_feature_' . $x, // section
-		'id'				 => 'home_theme_feature_title_' . $x, // unique ID
-		'default'			 => $default_titles[ $x - 1 ],
-		'option'			 => 'text',
-		'sanitize_callback'	 => 'sanitize_text_field',
-		'type'				 => 'control'
-	);
+// Feature page 2
+$options[] = array(
+	'title'				 => __( 'Select second feature page', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_2', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
+	'type'				 => 'control'
+);
 
-	// Section Description
-	$options[] = array(
-		'title'				 => __( 'Description', 'marvy' ), // Control label
-		'description'		 => '',
-		'section'			 => 'home_theme_feature_' . $x, // section
-		'id'				 => 'home_theme_feature_desc_' . $x, // unique ID
-		'default'			 => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor magna aliqua.', 'marvy' ),
-		'option'			 => 'textarea',
-		'sanitize_callback'	 => 'esc_textarea',
-		'type'				 => 'control'
-	);
-}
+$options[] = array(
+	'title'				 => __( 'Add icon class', 'marvy' ), // Control label
+	'description'		 => __( '', 'marvy' ),
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_icon_2', // unique ID
+	'default'			 => 'ti-folder',
+	'option'			 => 'text',
+	'sanitize_callback'	 => 'sanitize_text_field',
+	'type'				 => 'control'
+);
+
+// Feature page 3
+$options[] = array(
+	'title'				 => __( 'Select third feature page', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_3', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
+	'type'				 => 'control'
+);
+
+$options[] = array(
+	'title'				 => __( 'Add icon class', 'marvy' ), // Control label
+	'description'		 => __( '', 'marvy' ),
+	'section'			 => 'home_theme_features', // section
+	'id'				 => 'home_theme_feature_icon_3', // unique ID
+	'default'			 => 'ti-face-smile',
+	'option'			 => 'text',
+	'sanitize_callback'	 => 'sanitize_text_field',
+	'type'				 => 'control'
+);
 
 /*
  * Latest blog
@@ -332,49 +321,23 @@ $options[] = array(
 	'option'			 => 'color',
 	'sanitize_callback'	 => '',
 	'type'				 => 'control',
- //'transport' => 'postMessage'
 );
 
 /*
  * Home Callout
  */
 
-// Section title
+// Banner Content Page
 $options[] = array(
-	'title'				 => __( 'Title', 'marvy' ), // Control label
+	'title'				 => __( 'Select callout content page', 'marvy' ), // Control label
 	'description'		 => '', // Control description
 	'section'			 => 'home_callout', // section
 	'id'				 => 'home_callout_content', // unique ID
-	'default'			 => __( 'Marvy is incredibly spacious with a clean responsive design.', 'marvy' ),
-	'option'			 => 'textarea',
-	'sanitize_callback'	 => 'esc_textarea',
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => '',
 	'type'				 => 'control'
 );
-
-// Banner button text
-$options[] = array(
-	'title'				 => __( 'Button Text', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_callout', // section
-	'id'				 => 'home_callout_button_text', // unique ID
-	'default'			 => __( 'Download', 'marvy' ),
-	'option'			 => 'text',
-	'sanitize_callback'	 => 'sanitize_text_field',
-	'type'				 => 'control'
-);
-
-// Banner button link
-$options[] = array(
-	'title'				 => __( 'Button Link', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_callout', // section
-	'id'				 => 'home_callout_button_url', // unique ID
-	'default'			 => '#',
-	'option'			 => 'url',
-	'sanitize_callback'	 => 'esc_url',
-	'type'				 => 'control'
-);
-
 
 /* ---------------------------------------------------------------------------------------------------
   End Control Options

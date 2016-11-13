@@ -7,10 +7,13 @@
 			<div class="grid-cell grid-cell-center">
 
 				<div class="banner-content">
-					<?php echo html_entity_decode( get_option( 'home_banner_text' ) ); ?>
+					<?php
+					$page_id = get_option( 'home_banner_content' );
+					marvy_get_excerpt_by_id( $page_id );
+					?>
 				</div>
 
-				<a class="button invert" href="<?php echo get_option( 'home_banner_button_url' ); ?>"><?php echo get_option( 'home_banner_button_text' ); ?></a>
+				<a class="button invert" href="<?php echo get_permalink( $page_id ); ?>"><?php echo get_option( 'home_banner_button_text' ); ?></a>
 
 			</div>
 

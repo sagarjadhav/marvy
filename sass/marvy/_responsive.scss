@@ -10,14 +10,20 @@
 
     .img-wrap {
         display: inline-block;
-        margin-bottom: 2rem;
         max-width: 100%;
     }
 
+    .post-box-style .grid-cell {
+        margin-bottom: 1.5rem;
+    }
+
     .post-box-style .post {
-        max-width: 340px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
     }
 
     .entry-title {
@@ -30,6 +36,10 @@
 
     .fixed-header {
         position: absolute;
+    }
+
+    .home-section h2 {
+        margin-bottom: 3rem;
     }
 }
 

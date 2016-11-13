@@ -34,6 +34,10 @@
     }
 }
 
+.home-callout p:last-child {
+    margin: 0;
+}
+
 .img-wrap {
     border-radius: 4px;
     overflow: hidden;
@@ -153,6 +157,7 @@
     display: block;
     margin: 60px auto 20px;
     max-width: 380px;
+    width: 100%;
 }
 
 .entry-footer {

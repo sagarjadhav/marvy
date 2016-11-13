@@ -4,17 +4,14 @@
 
 		<h2><?php echo html_entity_decode( get_option( 'home_about_title' ) ); ?></h2>
 
-		<p><?php echo html_entity_decode( get_option( 'home_about_text' ) ); ?></p>
-
 		<?php
-		$image_url = get_option( 'home_about_image' );
+		$page_id = get_option( 'home_about_content' );
+		marvy_get_excerpt_by_id( $page_id );
 
-		if ( empty( $image_url ) ) {
-			$image_url = get_template_directory_uri() . '/img/about-img.png';
+		if ( has_post_thumbnail( $page_id ) ) {
+			echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );
 		}
 		?>
-
-		<img class="about-img" src="<?php echo $image_url; ?>" alt="" />
 
 	</div>
 

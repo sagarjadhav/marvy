@@ -4,18 +4,40 @@
 
 		<h2><?php echo get_option( 'home_theme_feature_title' ); ?></h2>
 
-		<ul class="grid grid-wrap">
+		<?php
+		$page_first	 = get_option( 'home_theme_feature_1' );
+		$page_second = get_option( 'home_theme_feature_2' );
+		$page_third	 = get_option( 'home_theme_feature_3' );
 
-			<?php for ( $x = 1; $x <= 6; $x++ ) { ?>
+		$icon_1	 = get_option( 'home_theme_feature_icon_1' );
+		$icon_2	 = get_option( 'home_theme_feature_icon_2' );
+		$icon_3	 = get_option( 'home_theme_feature_icon_3' );
 
-				<li class="grid-cell sm-grid-1-2 lg-grid-1-3">
-					<i class="icon <?php echo get_option( 'home_theme_feature_icon_' . $x ); ?>"></i>
-					<h4><?php echo get_option( 'home_theme_feature_title_' . $x ); ?></h4>
-					<p><?php echo get_option( 'home_theme_feature_desc_' . $x ); ?></p>
-				</li>
+		$pages = array( $page_first, $page_second, $page_third );
+		?>
 
-			<?php } ?>
+		<ul class="grid">
+
+			<?php
+			foreach ( $pages as $page ) {
+
+				if ( 0 != $page ) {
+					?>
+
+					<li class="grid-cell">
+						<i class="icon <?php echo get_option( 'home_theme_feature_icon_1' ); ?>"></i>
+						<h4><?php echo get_the_title( $page ); ?></h4>
+						<div class="page-excerpt">
+							<?php marvy_get_excerpt_by_id( $page ); ?>
+						</div>
+					</li>
+
+					<?php
+				}
+			}
+			?>
 		</ul>
+
 	</div>
 
 </div>
