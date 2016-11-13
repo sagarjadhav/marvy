@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 12:08:38+00:00\n"
+"POT-Creation-Date: 2016-11-13 12:33:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -188,20 +188,20 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:97
+#: inc/extras.php:81
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: inc/extras.php:102
+#: inc/extras.php:86
 #. translators: 1: date, 2: time
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/extras.php:103
+#: inc/extras.php:87
 msgid "(Edit)"
 msgstr ""
 
-#: inc/extras.php:108
+#: inc/extras.php:92
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
