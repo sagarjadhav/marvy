@@ -9,7 +9,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: marvy
 Domain Path: /languages/
-Tags: theme-options, custom-menu, two-columns, right-sidebar, footer-widgets
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-menu, featured-images, post-formats, full-width-template, translation-ready, theme-options, threaded-comments, footer-widgets.
 */
 /* GRID */
 /**
@@ -3363,7 +3363,7 @@ div#primary-menu > ul > li > a {
     content: "\e75f";
 }
 
-body:not(.error404) .entry-grid .site-main {
+body:not(.error404):not(.page-template-full-width) .entry-grid .site-main {
     max-width: 720px;
     width: 100%;
 }

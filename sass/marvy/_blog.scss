@@ -1,6 +1,6 @@
 .entry-grid {
 
-    body:not(.error404) & .site-main {
+    body:not(.error404):not(.page-template-full-width) & .site-main {
         max-width: 720px;
         width: 100%;
     }
