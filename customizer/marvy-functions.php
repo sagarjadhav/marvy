@@ -8,9 +8,7 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 		$link_rgb	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'link_color' ) ) );
 		$banner_bg	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'home_banner_bg_color' ) ) );
 		?>
-
 		<style>
-
 			.site-header { background-color: rgba(<?php echo $banner_bg; ?>, 0.94); }
 
 			.nav-site-title,
@@ -37,9 +35,7 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 			.overlay {
 				background-color: rgba(<?php echo $link_rgb; ?>, 0.94);
 			}
-
 		</style>
-
 		<?php
 	}
 
@@ -66,7 +62,6 @@ if ( !function_exists( 'marvy_hex2rgb' ) ) {
 
 		$rgb = array( $r, $g, $b );
 		return implode( ',', $rgb ); // returns the rgb values separated by commas
-		//return $rgb; // returns an array with the rgb values
 	}
 
 }
