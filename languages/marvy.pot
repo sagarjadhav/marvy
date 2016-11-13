@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 14:15:50+00:00\n"
+"POT-Creation-Date: 2016-11-13 15:37:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Theme Features"
 msgstr ""
 
-#: customizer/customizer-marvy.php:66 customizer/customizer-marvy.php:288
+#: customizer/customizer-marvy.php:66 customizer/customizer-marvy.php:276
 msgid "Latest Blog"
 msgstr ""
 
@@ -93,68 +93,60 @@ msgstr ""
 msgid "Select banner content page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:115
-msgid "Button Text"
-msgstr ""
-
 #: customizer/customizer-marvy.php:119
-msgid "Download"
-msgstr ""
-
-#: customizer/customizer-marvy.php:131
 msgid "Select about content page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:147 customizer/customizer-marvy.php:199
+#: customizer/customizer-marvy.php:135 customizer/customizer-marvy.php:187
 msgid "Section Title"
 msgstr ""
 
-#: customizer/customizer-marvy.php:151
+#: customizer/customizer-marvy.php:139
 msgid "Get Started with Pages"
 msgstr ""
 
-#: customizer/customizer-marvy.php:159
+#: customizer/customizer-marvy.php:147
 msgid "Select first page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:171
+#: customizer/customizer-marvy.php:159
 msgid "Select second page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:183
+#: customizer/customizer-marvy.php:171
 msgid "Select third page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:203
+#: customizer/customizer-marvy.php:191
 msgid "Theme features"
 msgstr ""
 
-#: customizer/customizer-marvy.php:211
+#: customizer/customizer-marvy.php:199
 msgid "Select first feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:222 customizer/customizer-marvy.php:245
-#: customizer/customizer-marvy.php:268
+#: customizer/customizer-marvy.php:210 customizer/customizer-marvy.php:233
+#: customizer/customizer-marvy.php:256
 msgid "Add icon class"
 msgstr ""
 
-#: customizer/customizer-marvy.php:234
+#: customizer/customizer-marvy.php:222
 msgid "Select second feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:257
+#: customizer/customizer-marvy.php:245
 msgid "Select third feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:284
+#: customizer/customizer-marvy.php:272
 msgid "Blog Title"
 msgstr ""
 
-#: customizer/customizer-marvy.php:296
+#: customizer/customizer-marvy.php:284
 msgid "Link Color"
 msgstr ""
 
-#: customizer/customizer-marvy.php:312
+#: customizer/customizer-marvy.php:300
 msgid "Select callout content page"
 msgstr ""
 
@@ -183,20 +175,20 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:81
+#: inc/extras.php:88
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: inc/extras.php:86
+#: inc/extras.php:93
 #. translators: 1: date, 2: time
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/extras.php:87
+#: inc/extras.php:94
 msgid "(Edit)"
 msgstr ""
 
-#: inc/extras.php:92
+#: inc/extras.php:99
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -271,7 +263,7 @@ msgid "Pages:"
 msgstr ""
 
 #: template-parts/content.php:10 template-parts/content.php:43
-#: template-parts/home-latest-blog.php:23
+#: template-parts/home-latest-blog.php:27
 msgid "Permalink to %s"
 msgstr ""
 
@@ -282,6 +274,12 @@ msgstr ""
 
 #: template-parts/content.php:43
 msgid "Read More"
+msgstr ""
+
+#: template-parts/home-feature-pages.php:8
+#: template-parts/home-latest-blog.php:8
+#: template-parts/home-theme-features.php:8
+msgid "<h2>%s</h2>"
 msgstr ""
 
 #. Theme Name of the plugin/theme

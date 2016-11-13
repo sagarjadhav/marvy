@@ -1,7 +1,7 @@
 === Marvy ===
 
-Requires at least: 4.4
-Tested up to: 4.6.1
+Requires at least: 4.5
+Tested up to: 4.7-beta3
 Version: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

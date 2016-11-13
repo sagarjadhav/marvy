@@ -2,10 +2,10 @@
 	<div class="container">
 		<?php
 		// Title
-		$title = esc_attr__( get_option( 'home_blog_title' ), 'marvy' );
+		$title = esc_attr( get_option( 'home_blog_title' ) );
 
 		if ( !empty( $title ) ) {
-			echo '<h2>' . $title . '</h2>';
+			printf( __( '<h2>%s</h2>', 'marvy' ), $title );
 		}
 		?>
 
