@@ -20,7 +20,6 @@ $options = array(); // If you delete this line, the sky will fall down! So you b
 
 $options[] = array(
 	'title'			 => __( 'Home Page', 'marvy' ), // Panel name
-	//'description' => __( 'Home page settings.', 'marvy' ), // Panel description
 	'id'			 => 'home_panel', // unique ID
 	'priority'		 => 10,
 	'theme_supports' => '',
@@ -33,7 +32,6 @@ $options[] = array(
 
 $options[] = array(
 	'title'			 => __( 'Header Banner', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_banner_section', // unique ID
 	'theme_supports' => '',
@@ -42,7 +40,6 @@ $options[] = array(
 
 $options[] = array(
 	'title'			 => __( 'About Content', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_about_content', // unique ID
 	'theme_supports' => '',
@@ -51,7 +48,6 @@ $options[] = array(
 
 $options[] = array(
 	'title'			 => __( 'Feature Pages', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_feature_pages', // unique ID
 	'theme_supports' => '',
@@ -60,7 +56,6 @@ $options[] = array(
 
 $options[] = array(
 	'title'			 => __( 'Theme Features', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_theme_features', // unique ID
 	'theme_supports' => '',
@@ -69,7 +64,6 @@ $options[] = array(
 
 $options[] = array(
 	'title'			 => __( 'Latest Blog', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_latest_blog', // unique ID
 	'theme_supports' => '',
@@ -77,8 +71,7 @@ $options[] = array(
 );
 
 $options[] = array(
-	'title'			 => __( 'Home Callout', 'marvy' ), // Section name
-	//'description' => __( 'Header banner settings.', 'marvy' ), // Section description
+	'title'			 => __( 'Callout Section', 'marvy' ), // Section name
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_callout', // unique ID
 	'theme_supports' => '',
@@ -101,9 +94,8 @@ $options[] = array(
 	'id'				 => 'home_banner_bg_color', // unique ID
 	'default'			 => '#ef6e7e', // HEX
 	'option'			 => 'color',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'sanitize_hex_color',
 	'type'				 => 'control',
- //'transport' => 'postMessage'
 );
 
 // Banner Content Page
@@ -114,37 +106,13 @@ $options[] = array(
 	'id'				 => 'home_banner_content', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
-	'type'				 => 'control'
-);
-
-// Banner button text
-$options[] = array(
-	'title'				 => __( 'Button Text', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_banner_section', // section
-	'id'				 => 'home_banner_button_text', // unique ID
-	'default'			 => __( 'Download', 'marvy' ),
-	'option'			 => 'text',
-	'sanitize_callback'	 => 'sanitize_text_field',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
 /*
- * Home feature content
+ * Home about content
  */
-
-// Section title
-$options[] = array(
-	'title'				 => __( 'Section Title', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_about_content', // section
-	'id'				 => 'home_about_title', // unique ID
-	'default'			 => __( 'About Marvy', 'marvy' ),
-	'option'			 => 'text',
-	'sanitize_callback'	 => 'sanitize_text_field',
-	'type'				 => 'control'
-);
 
 // Banner Content Page
 $options[] = array(
@@ -154,7 +122,7 @@ $options[] = array(
 	'id'				 => 'home_about_content', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -182,7 +150,7 @@ $options[] = array(
 	'id'				 => 'home_feature_page_first', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -194,7 +162,7 @@ $options[] = array(
 	'id'				 => 'home_feature_page_second', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -206,7 +174,7 @@ $options[] = array(
 	'id'				 => 'home_feature_page_third', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -234,7 +202,7 @@ $options[] = array(
 	'id'				 => 'home_theme_feature_1', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -257,7 +225,7 @@ $options[] = array(
 	'id'				 => 'home_theme_feature_2', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -280,7 +248,7 @@ $options[] = array(
 	'id'				 => 'home_theme_feature_3', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
@@ -319,7 +287,7 @@ $options[] = array(
 	'id'				 => 'link_color', // unique ID
 	'default'			 => '#ef6e7e', // HEX
 	'option'			 => 'color',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'sanitize_hex_color',
 	'type'				 => 'control',
 );
 
@@ -335,7 +303,7 @@ $options[] = array(
 	'id'				 => 'home_callout_content', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
-	'sanitize_callback'	 => '',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 

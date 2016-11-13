@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marvy 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 12:33:52+00:00\n"
+"POT-Creation-Date: 2016-11-13 14:15:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,105 +61,100 @@ msgstr ""
 msgid "Home Page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:35
+#: customizer/customizer-marvy.php:34
 msgid "Header Banner"
 msgstr ""
 
-#: customizer/customizer-marvy.php:44
+#: customizer/customizer-marvy.php:42
 msgid "About Content"
 msgstr ""
 
-#: customizer/customizer-marvy.php:53
+#: customizer/customizer-marvy.php:50
 msgid "Feature Pages"
 msgstr ""
 
-#: customizer/customizer-marvy.php:62
+#: customizer/customizer-marvy.php:58
 msgid "Theme Features"
 msgstr ""
 
-#: customizer/customizer-marvy.php:71 customizer/customizer-marvy.php:308
+#: customizer/customizer-marvy.php:66 customizer/customizer-marvy.php:288
 msgid "Latest Blog"
 msgstr ""
 
-#: customizer/customizer-marvy.php:80
-msgid "Home Callout"
+#: customizer/customizer-marvy.php:74
+msgid "Callout Section"
 msgstr ""
 
-#: customizer/customizer-marvy.php:98
+#: customizer/customizer-marvy.php:91
 msgid "Background"
 msgstr ""
 
-#: customizer/customizer-marvy.php:111
+#: customizer/customizer-marvy.php:103
 msgid "Select banner content page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:123
+#: customizer/customizer-marvy.php:115
 msgid "Button Text"
 msgstr ""
 
-#: customizer/customizer-marvy.php:127
+#: customizer/customizer-marvy.php:119
 msgid "Download"
 msgstr ""
 
-#: customizer/customizer-marvy.php:139 customizer/customizer-marvy.php:167
-#: customizer/customizer-marvy.php:219
-msgid "Section Title"
-msgstr ""
-
-#: customizer/customizer-marvy.php:143
-msgid "About Marvy"
-msgstr ""
-
-#: customizer/customizer-marvy.php:151
+#: customizer/customizer-marvy.php:131
 msgid "Select about content page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:171
+#: customizer/customizer-marvy.php:147 customizer/customizer-marvy.php:199
+msgid "Section Title"
+msgstr ""
+
+#: customizer/customizer-marvy.php:151
 msgid "Get Started with Pages"
 msgstr ""
 
-#: customizer/customizer-marvy.php:179
+#: customizer/customizer-marvy.php:159
 msgid "Select first page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:191
+#: customizer/customizer-marvy.php:171
 msgid "Select second page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:203
+#: customizer/customizer-marvy.php:183
 msgid "Select third page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:223
+#: customizer/customizer-marvy.php:203
 msgid "Theme features"
 msgstr ""
 
-#: customizer/customizer-marvy.php:231
+#: customizer/customizer-marvy.php:211
 msgid "Select first feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:242 customizer/customizer-marvy.php:265
-#: customizer/customizer-marvy.php:288
+#: customizer/customizer-marvy.php:222 customizer/customizer-marvy.php:245
+#: customizer/customizer-marvy.php:268
 msgid "Add icon class"
 msgstr ""
 
-#: customizer/customizer-marvy.php:254
+#: customizer/customizer-marvy.php:234
 msgid "Select second feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:277
+#: customizer/customizer-marvy.php:257
 msgid "Select third feature page"
 msgstr ""
 
-#: customizer/customizer-marvy.php:304
+#: customizer/customizer-marvy.php:284
 msgid "Blog Title"
 msgstr ""
 
-#: customizer/customizer-marvy.php:316
+#: customizer/customizer-marvy.php:296
 msgid "Link Color"
 msgstr ""
 
-#: customizer/customizer-marvy.php:332
+#: customizer/customizer-marvy.php:312
 msgid "Select callout content page"
 msgstr ""
 

@@ -1,43 +1,46 @@
 <div class="home-section home-theme-features">
-
 	<div class="container">
-
-		<h2><?php echo get_option( 'home_theme_feature_title' ); ?></h2>
-
 		<?php
-		$page_first	 = get_option( 'home_theme_feature_1' );
-		$page_second = get_option( 'home_theme_feature_2' );
-		$page_third	 = get_option( 'home_theme_feature_3' );
+		// Title
+		$title = esc_attr__( get_option( 'home_theme_feature_title' ), 'marvy' );
 
-		$icon_1	 = get_option( 'home_theme_feature_icon_1' );
-		$icon_2	 = get_option( 'home_theme_feature_icon_2' );
-		$icon_3	 = get_option( 'home_theme_feature_icon_3' );
+		if ( !empty( $title ) ) {
+			echo '<h2>' . $title . '</h2>';
+		}
 
-		$pages = array( $page_first, $page_second, $page_third );
+		// Pages
+		$page_first	 = intval( get_option( 'home_theme_feature_1' ) );
+		$page_second = intval( get_option( 'home_theme_feature_2' ) );
+		$page_third	 = intval( get_option( 'home_theme_feature_3' ) );
+
+		$icon_0	 = esc_attr( get_option( 'home_theme_feature_icon_1' ) );
+		$icon_1	 = esc_attr( get_option( 'home_theme_feature_icon_2' ) );
+		$icon_2	 = esc_attr( get_option( 'home_theme_feature_icon_3' ) );
+
+		$pages = array_values( compact( 'page_first', 'page_second', 'page_third' ) );
 		?>
 
 		<ul class="grid">
-
 			<?php
-			foreach ( $pages as $page ) {
+			foreach ( $pages as $key => $page ) {
 
 				if ( 0 != $page ) {
 					?>
-
 					<li class="grid-cell">
-						<i class="icon <?php echo get_option( 'home_theme_feature_icon_1' ); ?>"></i>
+						<?php if ( !empty( ${"icon_$key"} ) ) { ?>
+							<i class="icon <?php echo ${"icon_$key"}; ?>"></i>
+						<?php } ?>
+
 						<h4><?php echo get_the_title( $page ); ?></h4>
+
 						<div class="page-excerpt">
 							<?php marvy_page_content_by_id( $page ); ?>
 						</div>
 					</li>
-
 					<?php
 				}
 			}
 			?>
 		</ul>
-
 	</div>
-
 </div>

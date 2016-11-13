@@ -43,5 +43,6 @@ along with this program. If not, see < http://www.gnu.org/licenses/ >
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPL2](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Modernizr https://modernizr.com/ Copyright (c) Faruk Ates, Paul Irish, Alex Sexton, [MIT](https://modernizr.com/license/)
+* WPshed Customizer http://wpshed.com/ Author: Stefan I, [GPL2](https://www.gnu.org/licenses/gpl-2.0.html)
 * Google Fonts [SIL OFL 1.1](http://scripts.sil.org/OFL)
-* Themify Icons https://themify.me/themify-icons, Font licensed under: http://scripts.sil.org/OFL
+* Themify Icons https://themify.me/themify-icons, [SIL OFL 1.1](http://scripts.sil.org/OFL)

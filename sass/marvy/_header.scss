@@ -92,6 +92,11 @@ body:not(.page-template-homepage) .site-content {
 }
 
 .banner-content {
-    padding-bottom: rem-calc(32);
-    /*text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);*/
+    .button.invert {
+        margin-top: 3rem;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }

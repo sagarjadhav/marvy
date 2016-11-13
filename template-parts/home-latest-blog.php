@@ -1,11 +1,15 @@
 <div class="home-section home-latest-blog post-box-style">
-
 	<div class="container">
+		<?php
+		// Title
+		$title = esc_attr__( get_option( 'home_blog_title' ), 'marvy' );
 
-		<h2><?php echo get_option( 'home_blog_title' ); ?></h2>
+		if ( !empty( $title ) ) {
+			echo '<h2>' . $title . '</h2>';
+		}
+		?>
 
 		<div class="grid">
-
 			<?php
 			$args = array( 'posts_per_page' => 3, 'ignore_sticky_posts' => 1 );
 
@@ -22,8 +26,8 @@
 							<?php if ( has_post_thumbnail() ) { ?>
 								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'marvy' ), the_title_attribute( 'echo=0' ) ) ); ?>">
 									<?php the_post_thumbnail( 'marvy-thumb' ); ?>
-								</a><?php
-							} ?>
+								</a><?php }
+								?>
 
 							<header class="entry-header">
 								<?php the_title( sprintf( '<h4 class="title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
@@ -44,9 +48,6 @@
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
-
 		</div>
-
 	</div>
-
 </div>

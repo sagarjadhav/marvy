@@ -1,6 +1,13 @@
 <?php
 
 /**
+ * Sanitize page id
+ */
+function marvy_sanitize_int( $page_id ) {
+	return intval( $page_id );
+}
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.

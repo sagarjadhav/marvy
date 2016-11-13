@@ -5,8 +5,8 @@
 if ( !function_exists( 'marvy_customize_css' ) ) {
 
 	function marvy_customize_css() {
-		$link_rgb	 = marvy_hex2rgb( get_option( 'link_color' ) );
-		$banner_bg	 = marvy_hex2rgb( get_option( 'home_banner_bg_color' ) );
+		$link_rgb	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'link_color' ) ) );
+		$banner_bg	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'home_banner_bg_color' ) ) );
 		?>
 
 		<style>
@@ -14,8 +14,8 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 			.site-header { background-color: rgba(<?php echo $banner_bg; ?>, 0.94); }
 
 			.nav-site-title,
-			.home-banner { background-color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
-			.home-banner .button.invert { color:<?php echo get_option( 'home_banner_bg_color' ); ?>; }
+			.home-banner { background-color: rgba(<?php echo $banner_bg; ?>, 1); }
+			.home-banner .button.invert { color: rgba(<?php echo $banner_bg; ?>, 1); }
 
 			a,
 			.home-theme-features .icon,
@@ -26,12 +26,12 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 			.entry-footer i,
 			.button.button-cirlce,
 			.site-footer a:hover {
-				color: <?php echo get_option( 'link_color' ); ?>;
+				color: rgba(<?php echo $link_rgb; ?>, 1);
 			}
 
 			.button,
 			#submit {
-				background-color: <?php echo get_option( 'link_color' ); ?>;
+				background-color: rgba(<?php echo $link_rgb; ?>, 1);
 			}
 
 			.overlay {
