@@ -14,10 +14,13 @@ if ( 0 == $page_id ) {
 		if ( !empty( $title ) ) {
 			echo '<h2>' . $title . '</h2>';
 		}
+		?>
 
-		// Get page excerpt
-		marvy_page_content_by_id( $page_id, 'the_excerpt' );
+		<div class="about-excerpt">
+			<?php marvy_page_content_by_id( $page_id, 'the_excerpt' ); ?>
+		</div>
 
+		<?php
 		// Feature Image
 		if ( has_post_thumbnail( $page_id ) ) {
 			echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );

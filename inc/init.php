@@ -78,11 +78,6 @@ if ( !function_exists( 'marvy_setup' ) ) :
 			'default-color'	 => 'ffffff',
 			'default-image'	 => '',
 		) ) );
-
-		/**
-		 * Enables the Excerpt meta box in Page edit screen.
-		 */
-		add_post_type_support( 'page', 'excerpt' );
 	}
 
 endif; // marvy_setup
