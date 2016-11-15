@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*!
 Theme Name: Marvy
-Theme URI: http://marvythemes.com/
 Description: Marvy is a free Wordpress theme. It's perfect for web agency business, corporate business, personal and parallax business portfolio, photography sites and freelancer. Is is responsive, clean, modern, flat and minimal.
 Version: 1.0.1
 Author: Sagar Jadhav
@@ -3406,7 +3405,6 @@ body:not(.error404):not(.page-template-full-width) .entry-grid .site-main {
 .post-box-style h4 a {
   font-weight: 400;
   font-size: 16px;
-  text-transform: capitalize;
   color: #272727;
 }
 .post-box-style .entry-header {
