@@ -22,7 +22,7 @@ Marvy is a free Wordpress theme. It's perfect for web agency business, corporate
 
 == Copyright ==
 
-Marvy WordPress Theme, Copyright 2016
+Marvy WordPress Theme, Copyright 2016, Sagar Jadhav
 Marvy is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
