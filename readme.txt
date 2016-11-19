@@ -40,12 +40,12 @@ along with this program. If not, see < http://www.gnu.org/licenses/ >
 
 == Changelog ==
 
-= 1.0.2 - Sep 28 2016 =
+= 1.0.2 =
 ** Fixed flex grid issue occurs in mobile.
 ** Updated some responsive classes and styles.
 ** Updated image size for better view.
 
-= 1.0.1 - Nov 16 2016 =
+= 1.0.1 =
 * Initial release
 
 == Credits ==
