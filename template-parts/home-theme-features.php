@@ -26,7 +26,7 @@
 
 				if ( 0 != $page ) {
 					?>
-					<li class="grid-cell">
+					<li class="grid-cell sm-grid-1-1 md-grid-1-3">
 						<?php if ( !empty( ${"icon_$key"} ) ) { ?>
 							<i class="icon <?php echo ${"icon_$key"}; ?>"></i>
 						<?php } ?>

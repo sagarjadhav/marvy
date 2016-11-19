@@ -22,7 +22,7 @@
 				if ( 0 != $page_id ) {
 					?>
 
-					<li class="grid-cell">
+					<li class="grid-cell sm-grid-1-1 md-grid-1-3">
 						<div class="img-wrap post">
 							<?php
 							if ( has_post_thumbnail( $page_id ) ) {

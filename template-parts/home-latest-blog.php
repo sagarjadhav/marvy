@@ -20,7 +20,7 @@
 				?>
 
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<div class="grid-cell">
+					<div class="grid-cell sm-grid-1-1 md-grid-1-3">
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-item' ); ?>>
 
 							<?php if ( has_post_thumbnail() ) { ?>
