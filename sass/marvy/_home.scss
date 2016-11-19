@@ -25,14 +25,14 @@
     }
 
     p {
-        color: #787878;
+        color: #666;
     }
 }
 
 .home-callout {
     & {
-        color: #787878;
-        font-size: 18px;
+        font-size: rem-calc(17);
+        color: #666;
         font-weight: 300;
     }
 

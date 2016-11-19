@@ -36,7 +36,8 @@ textarea {
 }
 
 .button,
-input[type="submit"],
+input[type=submit],
+input[type=button],
 #submit {
     background-color: #ef6e7e;
     border-radius: 2px;

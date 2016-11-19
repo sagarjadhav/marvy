@@ -55,11 +55,11 @@
     }
 
     h4 {
+        font-size: rem-calc(18);
+        font-weight: 400;
         margin: 0;
 
         a {
-            font-weight: 400;
-            font-size: 16px;
             color: #272727;
         }
     }
@@ -88,7 +88,7 @@
     .blog &,
     .search &,
     .archive & {
-        font-size: rem-calc(14);
+        font-size: rem-calc(15);
     }
 }
 

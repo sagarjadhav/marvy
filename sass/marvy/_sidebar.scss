@@ -1,9 +1,9 @@
 .widget-area {
-    font-size: 13px;
+    font-size: rem-calc(14);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    a {
+    a:not(.button) {
         color: #777;
         display: inline-block;
         transition: all 0.1s;
@@ -21,8 +21,8 @@
     text-transform: uppercase;
     border: none;
     color: #444;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: rem-calc(15);
+    letter-spacing: 1px;
 }
 
 .widget {

@@ -68,12 +68,13 @@
         font-size: 36px;
     }
 
-    .about-excerpt {
+    .about-excerpt,
+    .home-callout {
         max-width: 68%;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
 
 /* Extra large screen / wide desktop */
 @media (min-width: $grid-breakpoint-extra-large) {
