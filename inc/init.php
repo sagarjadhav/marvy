@@ -44,7 +44,7 @@ if ( !function_exists( 'marvy_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		if ( function_exists( 'add_image_size' ) ) {
-			add_image_size( 'marvy-thumb', 360, 270, true );
+			add_image_size( 'marvy-thumb', 440, 330, true );
 			add_image_size( 'marvy-large-thumb', 800, 320, true );
 		}
 
