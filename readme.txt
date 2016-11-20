@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Marvy is a free Wordpress theme. It's perfect for web agency business, corporate business, personal and parallax business portfolio, photography sites and freelancer. Is is responsive, clean, modern, flat and minimal.
+Marvy is a free Wordpress theme. It's perfect for web agency business, corporate business, personal and parallax business portfolio, photography sites and freelancer. It is responsive, clean, modern, flat and minimal.
 
 * Mobile-first, Responsive Layout
 * Custom Colors
