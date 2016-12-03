@@ -78,6 +78,16 @@ $options[] = array(
 	'type'			 => 'section'
 );
 
+$options[] = array(
+	'title'			 => __( 'Custom Codes', 'marvy' ), // Section name
+	'panel'			 => '', // panel
+	'priority'		 => 211,
+	'id'			 => 'custom_codes', // unique ID
+	'theme_supports' => '',
+	'type'			 => 'section'
+);
+
+
 /* ---------------------------------------------------------------------------------------------------
   Controls
   --------------------------------------------------------------------------------------------------- */
@@ -304,6 +314,18 @@ $options[] = array(
 	'default'			 => 0,
 	'option'			 => 'pages',
 	'sanitize_callback'	 => 'marvy_sanitize_int',
+	'type'				 => 'control'
+);
+
+// Section title
+$options[] = array(
+	'title'				 => __( 'Custom CSS', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'custom_codes', // section
+	'id'				 => 'custom_css', // unique ID
+	'default'			 => '',
+	'option'			 => 'textarea',
+	'sanitize_callback'	 => 'esc_textarea',
 	'type'				 => 'control'
 );
 

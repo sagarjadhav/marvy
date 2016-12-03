@@ -200,6 +200,17 @@ function wpc_customizer_register( $wp_customize ) {
 					) );
 					break;
 
+				// Textarea Field
+				case 'textarea':
+					$wp_customize->add_control( esc_attr( $option[ 'id' ] ), array(
+						'type'			 => 'textarea',
+						'priority'		 => $priority,
+						'section'		 => $section,
+						'label'			 => $title,
+						'description'	 => $description,
+					) );
+					break;
+
 				// Radio Field
 				case 'radio':
 					$choices = ( isset( $option[ 'choices' ] ) ) ? $option[ 'choices' ] : array();

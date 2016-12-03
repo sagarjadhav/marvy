@@ -7,6 +7,7 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 	function marvy_customize_css() {
 		$link_rgb	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'link_color' ) ) );
 		$banner_bg	 = marvy_hex2rgb( sanitize_hex_color( get_option( 'home_banner_bg_color' ) ) );
+		$custom_css	 = esc_textarea( get_option( 'custom_css' ) );
 		?>
 		<style>
 			.site-header { background-color: rgba(<?php echo $banner_bg; ?>, 0.94); }
@@ -35,6 +36,12 @@ if ( !function_exists( 'marvy_customize_css' ) ) {
 			.overlay {
 				background-color: rgba(<?php echo $link_rgb; ?>, 0.94);
 			}
+
+			<?php
+			if ( !empty( $custom_css ) ) {
+				echo $custom_css;
+			}
+			?>
 		</style>
 		<?php
 	}
