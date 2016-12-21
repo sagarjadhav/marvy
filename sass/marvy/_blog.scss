@@ -29,12 +29,12 @@
     clear: both;
 }
 
-.post-box-style {
+.home-latest-blog {
+    background-color: #f5f5f5;
+    border-top: 1px solid #eeeeee;
+}
 
-    & {
-        background-color: #f5f5f5;
-        border-top: 1px solid #eeeeee;
-    }
+.post-box-style {
 
     .grid {
         margin-bottom: 0;
@@ -172,4 +172,40 @@ h1.entry-title {
 
 .widget .search-form {
     display: block;
+}
+
+.blog-template-title {
+    font-size: rem-calc(35);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.blog-template-desc {
+    color: #666;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.page-template-blog-sidebar-grid {
+    .blog-template-title,
+    .blog-template-desc {
+        text-align: left;
+    }
+}
+
+.marvy-pagination {
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+
+.marvy-pagination > * {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px 15px;
 }

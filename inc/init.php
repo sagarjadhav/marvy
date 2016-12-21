@@ -78,6 +78,15 @@ if ( !function_exists( 'marvy_setup' ) ) :
 			'default-color'	 => 'ffffff',
 			'default-image'	 => '',
 		) ) );
+		
+		/**
+		 * Add custom log support
+		 */
+		add_theme_support( 'custom-logo', array(
+			'flex-height' => true,
+			'flex-width'  => true,
+		) );
+
 	}
 
 endif; // marvy_setup
