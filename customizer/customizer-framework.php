@@ -288,6 +288,7 @@ function wpc_customizer_register( $wp_customize ) {
 						'section'		 => $section,
 						'label'			 => $title,
 						'description'	 => $description,
+						'allow_addition' => true,
 					) );
 					break;
 
