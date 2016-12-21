@@ -1,8 +1,8 @@
 === Marvy ===
 
 Requires at least: 4.5
-Tested up to: 4.7-beta3
-Version: 1.0.2
+Tested up to: 4.7
+Version: 1.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,13 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see < http://www.gnu.org/licenses/ >
 
 == Changelog ==
+
+= 1.0.3 =
+** Added dropdown_pages customizer control has a new ability
+** Added Custom Logo support.
+** Added two Blog templates.
+** Added custom css option.
+** Fixed navbar issue.
 
 = 1.0.2 =
 ** Fixed flex grid issue occurs in mobile.
