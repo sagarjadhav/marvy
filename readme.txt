@@ -1,8 +1,8 @@
 === Marvy ===
 
 Requires at least: 4.5
-Tested up to: 4.7
-Version: 1.0.3
+Tested up to: 4.8
+Version: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,9 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see < http://www.gnu.org/licenses/ >
 
 == Changelog ==
+
+= 1.0.4 =
+** IE11 grid Fix
 
 = 1.0.3 =
 ** Added dropdown_pages customizer control has a new ability
